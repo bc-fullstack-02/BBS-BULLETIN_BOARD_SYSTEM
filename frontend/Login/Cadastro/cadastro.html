@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="CadastroCSS/cadastro.css">
+
+
+</head>
+
+<body>
+    <!--Tela de cadastro-->
+    <h1>cadastro usuario</h1>
+    <form class="formulario">
+        <div class="grupos">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+        </div>
+        <div class="grupos">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+        </div>
+        <!--Verfucar iddade-->
+        <div class="grupos">
+            <label for="Idade">Idade</label>
+            <input type="text" class="form-control" id="idade" name="idade" placeholder="Digite aqui sua Idade" required>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+            </div>
+            <div class="grupos">
+                <label for="confirmarSenha">Confirmar Senha</label>
+                <input type="password" class="form-control" id="confirmarSenha" name="confirmarSenha" placeholder="Confirmar Senha" required>
+            </div>
+            <button type="submit" class="botao" id="cadastrar">Cadastrar</button>
+
+            <!--Esta parte e so do script-->
+            <script src="cadastroJS/cadastro.js"></script>
+            <!---fim do script-->
+</body>
+
+</html>
