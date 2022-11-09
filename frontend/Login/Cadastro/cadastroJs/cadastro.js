@@ -19,7 +19,7 @@ idade.addEventListener('keyup', function() {
         cadastra.disabled = true;
     }
 });
-//verificar estamos
+//verificar  email
 let email = document.getElementById('email');
 let cadastro = document.getElementById('cadastro');
 cadastro.disabled = true;
