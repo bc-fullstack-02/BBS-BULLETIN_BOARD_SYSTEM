@@ -1,1 +1,0 @@
-alert("Bem vindo ao sistema de login");
