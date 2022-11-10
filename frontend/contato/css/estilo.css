@@ -1,0 +1,98 @@
+body {
+    font-family: sans-serif;
+    color: blueviolet;
+    background-color: rgb(182, 120, 240);
+}
+
+#container {
+    width: 450px;
+    height: 300px;
+    background-color: rgba(233, 213, 241, 0.3);
+    border-radius: 10px;
+    margin: 0 0;
+    padding: 110px;
+    text-align: center;
+    display: flex;
+    float: right;
+}
+
+
+/*estilazando os inputs, lembrando que este formulario eu ja tinha em meu repositorio*/
+
+input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+
+/*label*/
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(12, 11, 11);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 15px;
+}
+
+
+/*textarea*/
+
+textarea {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+
+/*botao*/
+
+button {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 5px #888888;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.img-svg {
+    width: 400px;
+    height: 400px;
+    margin: 0 0;
+    padding: 0 0;
+    text-align: center;
+    display: flex;
+    float: left;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
