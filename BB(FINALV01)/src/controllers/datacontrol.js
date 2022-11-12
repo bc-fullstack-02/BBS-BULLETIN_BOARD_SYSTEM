@@ -1,5 +1,5 @@
 const database = require('../models/database');
-model.exports = {
+database.exports = {
     create(req) {
         const { id, nome, idade, email, telefone, endereco, numero, bairro, cidade, estado, cep, complemento, status } = req.body;
         console.log(id);
@@ -15,6 +15,5 @@ model.exports = {
         console.log(cep);
         console.log(complemento);
         console.log(status);
-
     }
 }
