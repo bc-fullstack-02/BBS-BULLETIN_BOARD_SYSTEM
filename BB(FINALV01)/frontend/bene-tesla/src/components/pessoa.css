@@ -13,3 +13,15 @@ p{
     margin: 10px;
     box-shadow: #fff 0px 0px 10px 10px;
 }
+p:hover{
+    background-color: rgb(216, 200, 200);
+    color: #fff;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: #fff 0px 0px 10px 10px;
+}
