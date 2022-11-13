@@ -36,3 +36,6 @@ a{
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
+a:hover{
+  color: rgb(204, 13, 13);
+}
