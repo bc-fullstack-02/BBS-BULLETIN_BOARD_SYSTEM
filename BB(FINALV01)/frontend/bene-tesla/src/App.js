@@ -3,15 +3,15 @@ import './App.css';
 function App() {
   const menu = [
     {
-      name: 'Home',
-      link: '/',
+      name: 'INICIO',
+      link: '/home',
     },
     {
-      name: 'About',
+      name: 'SOBRE',
       link: '/about',
     },
     {
-      name: 'Contact',
+      name: 'CONTATO',
       link: '/contact',
     },
   ];
@@ -27,7 +27,7 @@ function App() {
               }</a>
             </li>
           ))}
-          
+
         </ul>
       </header>
         
