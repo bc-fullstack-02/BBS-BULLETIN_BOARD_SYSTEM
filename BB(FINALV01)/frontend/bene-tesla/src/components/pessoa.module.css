@@ -1,0 +1,28 @@
+div{
+    padding-top: 28px;
+    background-color: rgb(216, 200, 200);
+    color: #fff;
+}
+p{
+    color: #fff;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: #fff 0px 0px 10px 10px;
+}
+p:hover{
+    background-color: rgb(238, 17, 17);
+    color: rgb(236, 223, 223);
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: #fff 0px 0px 10px 10px;
+}
