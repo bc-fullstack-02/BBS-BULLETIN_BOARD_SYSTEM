@@ -1,4 +1,4 @@
-import './pessoa.css';
+import './pessoa.module.css';
 function Pessoa({nome, idade, cidade, estado, pais}) {
     return (
     <div>

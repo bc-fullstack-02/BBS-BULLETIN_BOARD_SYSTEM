@@ -1,5 +1,7 @@
 import './App.css';
 
+import Pessoa from './components/pessoa';
+
 function App() {
   const menu = [
     {
@@ -15,6 +17,7 @@ function App() {
       link: '/contact',
     },
   ];
+
   return (
      
     <div className="App">
@@ -27,13 +30,11 @@ function App() {
               }</a>
             </li>
           ))}
-
         </ul>
+       
       </header>
-        
+     <Pessoa nome="Bene"  idade="30" cidade="SAO PAULO" estado="SP" pais="Brasil"/>
     </div>
-   
   );
 }
-
-export default App;
+ export default App;
