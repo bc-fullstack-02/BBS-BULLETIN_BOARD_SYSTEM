@@ -10,14 +10,12 @@ h1{
   font-family: 'Montserrat', sans-serif;  
 }
 header{
-  background-color: rgb(252, 244, 244);
+  background-color: rgb(224, 31, 31);
   padding: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+  margin: 0px 5px 0px 5px;
+  display: block;
+  border-radius: 50px;
 }
 ul{
   list-style: none;
@@ -25,6 +23,7 @@ ul{
   padding: 0;
   display: flex;
   justify-content: space-around;
+  border-radius:50px ;
 }
 li{
   padding: 1rem;

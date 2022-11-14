@@ -1,6 +1,7 @@
 import './App.css';
 
 import Pessoa from './components/pessoa';
+import List from './components/list';
 
 function App() {
   const menu = [
@@ -14,7 +15,7 @@ function App() {
     },
     {
       name: 'CONTATO',
-      link: '/contact',
+      link: 'https://bene-tesla369.vercel.app/index.html',
     },
   ];
 
@@ -33,8 +34,11 @@ function App() {
         </ul>
        
       </header>
-     <Pessoa nome="Bene"  idade="30" cidade="SAO PAULO" estado="SP" pais="Brasil"/>
-    </div>
+     <Pessoa nome="Bene"  idade="30" cidade="SAO PAULO" estado="SP" pais="Brasil" id="5"/>
+     <List/> 
+      
+   </div>
+ 
   );
 }
  export default App;
