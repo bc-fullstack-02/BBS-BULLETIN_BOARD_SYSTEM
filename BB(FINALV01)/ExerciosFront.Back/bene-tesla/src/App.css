@@ -1,33 +1,52 @@
-h1{
-  text-align: center;
-  color: rgb(204, 13, 13);
-  font-size: 3rem;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  font-family: 'Montserrat', sans-serif;  
+* {
+    background-color: rgb(247, 241, 241);
+    color: rgb(228, 160, 13);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-header{
-  background-color: rgb(224, 31, 31);
-  padding: 1rem;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  margin: 0px 5px 0px 5px;
-  display: block;
-  border-radius: 50px;
+
+.App-header {
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    align-content: space-around;
 }
-ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  border-radius:50px ;
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
 }
-li{
-  padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    line-height: 15px;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
 }

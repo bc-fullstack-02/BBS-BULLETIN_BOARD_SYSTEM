@@ -1,9 +1,6 @@
 import './App.css';
-
-import Pessoa from './components/pessoa';
-import List from './components/list';
-import Eve from './components/eventos';
-
+import Home from './components/Inicio'
+import Conta from './components/contaform';
 function App() {
   const menu = [
     {
@@ -19,10 +16,9 @@ function App() {
       link: 'https://bene-tesla369.vercel.app/index.html',
     },
   ];
-
   return (
-     
-    <div className="App">
+
+    <>
       <header className="App-header">
         <ul>
           {menu.map((item) => (
@@ -33,14 +29,11 @@ function App() {
             </li>
           ))}
         </ul>
-       
       </header>
-     <Pessoa nome="Bene"  idade="30" cidade="SAO PAULO" estado="SP" pais="Brasil" id="5"/>
-     <List/> 
-      <Eve/>
-      
-   </div>
- 
+      <Home />
+      <Conta />
+    </>
+
   );
 }
- export default App;
+export default App;
