@@ -8,7 +8,7 @@ function eventos(){
                 <input type="text" name="estado" id="estado" placeholder="Estado"/>
                 <input type="text" name="pais" id="pais" placeholder="Pais"/>
                 <input type="text" name="id" id="id" placeholder="ID"/>
-                <button click="cadastrar()">Cadastrar</button>
+                <button  type="submit" onClick={cadastrar}>Cadastrar</button>
             </form>
            
         </div>
@@ -30,7 +30,9 @@ function cadastrar(){
         pais: pais,
         id: id
     }
-    console.log(pessoa);
+    document.write(pessoa.nome + " " + pessoa.idade + " " + pessoa.cidade + " " + pessoa.estado + " " + pessoa.pais + " " + pessoa.id);
+    //a ideia aqui e usar um formulario nesse estilo so que com mais dados e mostrando s eo usuario esta ativo ou nao
+    
 }  
 
 export default eventos;
