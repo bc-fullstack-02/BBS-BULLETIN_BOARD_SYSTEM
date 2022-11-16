@@ -5,6 +5,6 @@
   font-family: 'Courier New', Courier, monospace;
 }
 html, body , #root{
-  background-color: rgb(250, 249, 249);
+  background-color: #f3dbdb;
   height: 100%; 
 }

@@ -1,0 +1,20 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+}
+html, body #root{
+  height: 100%;
+  background-color: rgb(253, 232, 232);
+}
+/*lista de tarefas*/
+ul{
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(219, 130, 130);
+  
+}
