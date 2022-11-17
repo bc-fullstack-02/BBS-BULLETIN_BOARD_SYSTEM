@@ -1,26 +1,26 @@
-import logo from './logo.svg';
-import './index.css';
-
-function App() {
-  const carros = [
-    { marca: 'Ford', modelo: 'Fusion', ano: 2019 },
-    { marca: 'Chevrolet', modelo: 'Onix', ano: 2020 },
-    { marca: 'Fiat', modelo: 'Argo', ano: 2018 },
-    { marca: 'Volkswagen', modelo: 'Gol', ano: 2017 },
-    { marca: 'Toyota', modelo: 'Corolla', ano: 2016 },
-  ];
+import ReactDom from 'react-dom/client';
+import {BrowserRouter, Routes,Route } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home.js';
+import Sobre from './pages/Sobre';
+import Contato from './pages/Contato';
+export default function App() {
   return (
-    <div className='carro'>
-      <h1>Carros</h1>
-      <ul>
-        {carros.map((carro) => (
-          <li key={carro.ano}>
-            {carro.marca} {carro.modelo} - {carro.ano}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/contato" element={<Contato />} />
+        </Routes>
+      </Layout>
+      <section>
+        <h1>Welcome Ao primeiro Crud</h1>
+      </section>
+
+    </BrowserRouter>
+    
   );
 }
-
-export default App;
+const root = ReactDom.createRoot(document.getElementById('root'));
+root.render(<App />);

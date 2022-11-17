@@ -9,12 +9,38 @@ html, body #root{
   height: 100%;
   background-color: rgb(253, 232, 232);
 }
-/*lista de tarefas*/
-ul{
+nav{
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+nav li{
   list-style: none;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  align-items:left;
+  justify-content: space-around; 
+  
+}
+nav a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: bold;
-  color: rgb(219, 130, 130);
-  
+  cursor: pointer;
+}
+nav a:hover{
+  color: rgb(255, 0, 0);
+}
+section h1{
+  text-align: center;
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(162, 14, 175);
 }
