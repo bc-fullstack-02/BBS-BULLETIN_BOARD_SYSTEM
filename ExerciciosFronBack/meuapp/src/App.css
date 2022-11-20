@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+html,body #root {
+  height: 100%;
+  background-color: aliceblue;
+}
+/*Barra de navegação*/
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(240, 230, 230);
+  padding: 0 20px;
+  height: 60px;
+}
+nav a{
+  text-decoration: none;
+  color: rgb(212, 39, 39);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 15px;
+}
+nav a:hover{
+  color: rgb(0, 0, 0);
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  align-items: space-around;
+  margin: 15px;
+  padding: 15px;
+}
