@@ -1,23 +1,27 @@
 import './App.css';
-import ReactDOM from "react-dom/client";
-import {BrowserRouter, Routes,Route } from "react-router-dom";
-import Layout from "./pages/Layout";
+import {BrowserRouter, Routes,Route,Link} from "react-router-dom";
 import Home from "./pages/Home";
 import Contato from "./pages/Contato";
 import Usuarios from "./pages/usuarios";
+import Container from './Layout/Container';
 
 export default function App() {
     return (
+     
         <BrowserRouter>
-            <Layout>
+          <div>
+            <Link to="/">Home</Link>
+            <Link to="contato">Contato</Link>
+            <Link to="usuarios">Usuarios</Link>
+          </div>
+            <Container>              
                 <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/Contato" element={<Contato/>}/>
-                    <Route path="/usuarios" element={<Usuarios/>}/>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/contato" element={<Contato />} />
+                    <Route path="/usuarios" element={<Usuarios />} />
                 </Routes>
-            </Layout>
+            </Container>
         </BrowserRouter>
     );
 }
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App/>);
+
