@@ -1,7 +1,6 @@
 const http = require('http');
-const port = 3000;
-const server = http.createServer();
-/*
-inicianco o servidor
-*/
+const port = process.env.PORT || 3000;
+const lancamentos = require('./lancamento');
+const server = http.createServer(lancamentos);
+
 server.listen(port);
