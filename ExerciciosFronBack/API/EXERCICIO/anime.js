@@ -1,7 +1,7 @@
 const http = require('http');
-const express = require('express');
-const app = express();
 const port = 3000;
-const server = http.createServer(app);
-
+const server = http.createServer();
+/*
+inicianco o servidor
+*/
 server.listen(port);
