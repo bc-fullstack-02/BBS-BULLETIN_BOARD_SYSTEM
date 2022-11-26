@@ -3,7 +3,11 @@ const { route } = require('../lancamento');
 const router = express.Router();
 
 router.get ('/', (req, res) => {
-    res.send('Ola mundo!');
+    res.status(200).send({
+        mensagem: 'Usando o GET dentro da rota de animes'
+    });
+   
+
 }
 );
 router.post ('/', (req, res) => {
