@@ -34,7 +34,7 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 
 
 ## Documentação
-vou criar uns pdfs no drive explicando tudo
-[Documentação](https://link-da-documentação)
+** POR FAVOR LEIA ESTA DOC**
+[Documentação](https://docs.google.com/document/d/1ar7-TvbOc81gvo8a_RGGgIHy9Ke4H1SiB6khWfLS_Is/edit?usp=sharing)
 
 
