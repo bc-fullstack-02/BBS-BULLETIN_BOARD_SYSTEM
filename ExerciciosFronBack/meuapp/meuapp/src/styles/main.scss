@@ -119,7 +119,7 @@ nav {
                 background: rgb(238, 233, 233);
                 &:hover {
                         background: rgb(8, 61, 235);
-                
+                        
                     }
             }          
             
@@ -128,11 +128,30 @@ nav {
     }
 }
 //final do container
+//incio da secao de usuarios e listagem de produtos, estou comentando para nao dar erro no codigo ou nao me perder nessa jossa
 .Users {
     height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    .UsuariosContainer{
+        max-width: $max-width;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        .card{
+            padding: 15px;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+            box-shadow: 15px 14px 14px 14px rgba(157, 190, 236, 0.945);
+        }
+    }
     
 
 }
+//acabou essa desgraça
