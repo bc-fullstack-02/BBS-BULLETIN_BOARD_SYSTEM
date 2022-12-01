@@ -1,0 +1,138 @@
+$max-width: 1200px;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font: 16px Roboto, sans-serif;
+    background: #f0f0f5;
+}
+//Inicio do container
+button {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(10, 10, 10);
+    background: rgb(238, 233, 233);
+    border: 0;
+    border-radius: 16px;
+    padding: 10px 20px;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+
+    &:hover {
+        background: darken(rgb(8, 61, 235), 10%);
+        box-shadow: 14px 14px 14px 14px rgba(79, 145, 231, 0.945);
+    }
+    input{
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+        color: rgb(10, 10, 10);
+        background: rgb(238, 233, 233);
+    }
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .navConteudo {
+        max-width: $max-width;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: rgb(8, 61, 235);
+        border-radius: 15px;
+        
+        box-shadow: 15px 15px 15px 1px rgba(226, 212, 212, 0.2);
+    }
+
+    img {
+        height: 70px;
+        border-radius: 16px;
+        cursor: pointer;
+    }
+
+}
+
+.input-section {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    form {
+        max-width: $max-width;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            height: 10px;
+            font-size: 30px;
+            color: rgb(8, 61, 235);
+            margin-bottom: 22px;
+            margin-bottom: 25px;
+        }
+        label {
+            font-size: 20px;
+            color: rgb(8, 61, 235);
+            margin-bottom: 10px;
+            font-weight: bold;
+
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100;
+            gap: 2px;
+        
+            input {
+                height: 40px;
+                width: 100%;
+                padding: 0 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(10, 10, 10);
+                background: rgb(238, 233, 233);
+                &:hover {
+                        background: rgb(8, 61, 235);
+                
+                    }
+            }          
+            
+        }          
+        
+    }
+}
+//final do container
+.Users {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
