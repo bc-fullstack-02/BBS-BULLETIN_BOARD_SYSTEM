@@ -7,7 +7,7 @@ function Cadastrar() {
             <div className="modal">
                 <h1>CRIAR UMA NOVA CONTA</h1>
                 
-                <form>
+                <form >
                     <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
                     <input type="text" name="Sobrenome" placeholder="Digite seu sobrenome" required />
                     <input type="text" name="email" id="email" placeholder="Digite seu email" required />

@@ -270,6 +270,22 @@ nav {
                     background: rgb(8, 61, 235);
                     color: #f0f0f5;
                 }
+                select{
+                    height: 40px;
+                    width: 100%;
+                    padding: 0 20px;
+                    border: none;
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: rgb(10, 10, 10);
+                    background: rgb(238, 233, 233);
+                    border: none;
+                    border-radius: 16px;
+                    &:hover{
+                        background: rgb(8, 61, 235);
+                        color: #f0f0f5;
+                    }
+                }
             }
             button{
                 height: 40px;
