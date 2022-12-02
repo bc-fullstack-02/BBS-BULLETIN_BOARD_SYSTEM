@@ -12,7 +12,7 @@ $font-family: 'Roboto', sans-serif;
 body {
     font: 16px Roboto, sans-serif;
     background: rgb(82, 113, 255);
-   
+
 }
 
 //Inicio do container
@@ -184,7 +184,7 @@ nav {
         justify-content: center;
         background: rgb(240, 243, 245);
         border-radius: 15px;
-        
+
         img {
             width: 100%;
             height: 100%;
@@ -208,3 +208,101 @@ nav {
 }
 
 //acabou essa desgraça
+//inicio login
+.Background {
+    width: 100%;
+    height: 100vh;
+    background: rgb(82, 113, 255, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .modal{
+        background-color: #f0f0f5;
+        max-width: 600px;
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+        h1{
+            font-size: 30px;
+            color: rgb(8, 61, 235);
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            
+            label{
+                font-size: 20px;
+                color: rgb(8, 61, 235);
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+            input{
+                height: 40px;
+                width: 100%;
+                padding: 0 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(10, 10, 10);
+                background: rgb(238, 233, 233);
+                border: none;
+                border-radius: 16px;
+                &:hover{
+                    background: rgb(8, 61, 235);
+                    color: #f0f0f5;
+                }
+            }
+            button{
+                height: 40px;
+                width: 100%;
+                padding: 0 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(10, 10, 10);
+                background: rgb(238, 233, 233);
+                border: none;
+                border-radius: 16px;
+                &:hover{
+                    background: rgb(8, 61, 235);
+                    color: #f0f0f5;
+                }
+            }
+            .Cadastro{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                a{
+                    font-size: 15px;
+                    color: rgb(8, 61, 235);
+                    font-weight: bold;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+        }
+    }
+    
+}
