@@ -70,7 +70,8 @@ nav {
     }
 
 }
-
+//fim do container
+//inicio input
 .input-section {
     height: 40vh;
     display: flex;
@@ -117,8 +118,11 @@ nav {
                 font-weight: bold;
                 color: rgb(10, 10, 10);
                 background: rgb(238, 233, 233);
+                border: none;
+                border-radius: 16px;
                 &:hover {
                         background: rgb(8, 61, 235);
+                        color: #f0f0f5;
                         
                     }
             }          
@@ -127,7 +131,7 @@ nav {
         
     }
 }
-//final do container
+//fim input
 //incio da secao de usuarios e listagem de produtos, estou comentando para nao dar erro no codigo ou nao me perder nessa jossa
 .Users {
     height: 50vh;
@@ -135,23 +139,41 @@ nav {
     flex-direction: column;
     align-items: center;
     .UsuariosContainer{
-        max-width: $max-width;
+        max-width: 1200px;
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 20px;
-        .card{
-            padding: 15px;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgb(136, 143, 247);
+        border-radius: 15px;
+        box-shadow: 15px 15px 15px 1px rgba(21, 169, 228, 0.2);
+        padding: 10px;
+        img{
             width: 100%;
             height: 100%;
-            box-shadow: 15px 14px 14px 14px rgba(157, 190, 236, 0.945);
+            border-radius: 16px;
+        }
+        h1{
+            font-size: 20px;
+            color: rgb(8, 61, 235);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 15px;
+            color: rgb(8, 61, 235);
+            margin-bottom: 10px;
+            font-weight: bold;
         }
     }
-    
-
 }
 //acabou essa desgraça
