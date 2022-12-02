@@ -1,5 +1,5 @@
 $max-width: 1200px;
-
+$font-family: 'Roboto', sans-serif;
 * {
     margin: 0;
     padding: 0;
@@ -39,28 +39,36 @@ button {
 }
 
 nav {
-    height: 10vh;
+    background: rgb(8, 61, 235);
+    padding: 10px 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
 
     .navConteudo {
         max-width: $max-width;
         width: 100%;
         height: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
+        justify-items: center;
+        gap: 20px;
+        background: rgb(8, 61, 235);
+
+    
     }
 
     h1 {
         font-size: 30px;
-        color: rgb(8, 61, 235);
-        border-radius: 15px;
-        
-        box-shadow: 15px 15px 15px 1px rgba(226, 212, 212, 0.2);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+
     }
 
     img {
@@ -89,23 +97,28 @@ nav {
         flex-direction: column;
 
         h1 {
-            height: 10px;
             font-size: 30px;
-            color: rgb(8, 61, 235);
-            margin-bottom: 22px;
-            margin-bottom: 25px;
+            color: rgb(48, 61, 104);
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
         }
         label {
             font-size: 20px;
-            color: rgb(8, 61, 235);
+            color: rgb(22, 23, 24);
             margin-bottom: 10px;
             font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: $font-family;
 
         }
 
         .input-group {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             width: 100;
             gap: 2px;
         
@@ -138,13 +151,16 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin:  15px 15px 15px 15px;
     .UsuariosContainer{
-        max-width: 1200px;
         width: 100%;
         height: 100%;
         display: grid;
         grid-template-columns: auto auto auto;
         gap: 10px;
+        align-items: center;
+        justify-items: center;
+        
     }
     .card{
         width: 100%;
@@ -156,7 +172,7 @@ nav {
         background: rgb(136, 143, 247);
         border-radius: 15px;
         box-shadow: 15px 15px 15px 1px rgba(21, 169, 228, 0.2);
-        padding: 10px;
+      
         img{
             width: 100%;
             height: 100%;
@@ -165,13 +181,13 @@ nav {
         h1{
             font-size: 20px;
             color: rgb(8, 61, 235);
-            margin-bottom: 10px;
+            
             font-weight: bold;
         }
         p{
             font-size: 15px;
             color: rgb(8, 61, 235);
-            margin-bottom: 10px;
+            
             font-weight: bold;
         }
     }
