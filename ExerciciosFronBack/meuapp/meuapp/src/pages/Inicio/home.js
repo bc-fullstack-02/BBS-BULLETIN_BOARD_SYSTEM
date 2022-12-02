@@ -5,16 +5,23 @@ import CardUser from "../../Component/CardUSER/usercard";
 import Input from "../../Component/Input/input";
 import ModalControllerLogin from "../../Component/MODALCONTOLLERLOGIN/modal";
 function Home() {
-/*esconder e mostrar o modal*/
+  /*esconder e mostrar o modal*/
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function openModal() {
+    setIsModalOpen(true);
+  }
+  function closeModal() {
+    setIsModalOpen(false);
+  }
 
   return (
     <>
-      <Nav />
+      <Nav openModal={openModal}/>
       <Input />
       <CardUser />
-      
-    {isModalOpen ? <ModalControllerLogin /> : null}
+
+      {isModalOpen ? <ModalControllerLogin /> : null}
     </>
   );
 }
