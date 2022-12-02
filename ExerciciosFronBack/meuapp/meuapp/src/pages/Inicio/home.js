@@ -1,24 +1,15 @@
 import React from "react";
-import logo from '../../IMG/logo.png';
+import Nav from "../../Component/nave/navbar";
 function Home() {
   return (
     <>
-      <nav>
-        <div className="navConteudo">
-          <img src={logo} alt=" Logo da nossa aplicacao" />
-          <h1>B-B-S</h1>
-          <button>LOGIN</button>
-          
-        </div>
-      </nav>
+      <Nav />
       <section className="input-section">
     <form>
       <h1>Pesquisar Usuarios</h1>
       <div className="input-group">
-            <label htmlfor="users">Buscar Usuarios</label>
-            <input type="text" id="users" placeholder="Digite o nome do usuario" />
-            <label htmlfor="repos">Buscar Repositorios</label>
-            <input type="text" id="repos" placeholder="Digite o nome do repositorio" />
+           <input type="text" name="name" id="name" placeholder="Digite o nome do usuario" />
+            <input type="text" name="Respository" id="Respository" placeholder="Digite o nome do Respository" />
       </div>
     </form>
       </section>
