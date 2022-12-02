@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Cadastrar() {
+function Cadastrar({ setIsLogin }) {
     return (
         <div className="Background">
             <div className="modal">
@@ -22,7 +22,9 @@ function Cadastrar() {
                     </select>
 
                     <button>CADASTRAR</button><br></br>
-                    <Link>JA TENHO CONTA</Link>
+                    <div className="Cadastro">
+                        <Link onClick={setIsLogin}>JA TENHO CONTA</Link>
+                    </div>
                 </form>
             </div>
         </div>

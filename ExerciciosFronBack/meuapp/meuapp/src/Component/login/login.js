@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function Login({setIsLogin}) {
     return (
 
         <div className="Background">
@@ -15,7 +15,7 @@ function Login() {
                     <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
                     <button>ENTRAR</button><br></br>
                     <div className="Cadastro">
-                        <Link>Criar conta</Link>
+                        <Link onClick={setIsLogin}>Criar conta</Link>
                     </div>
                 </form>
             </div>
