@@ -4,11 +4,11 @@ function CardUser() {
         
             <div className="UsuariosContainer">
                 <div className="card">
-                    <h2>NOME USUARIO</h2>
-                    <h3>Repositorios</h3>
+                    <h2>NOME DO COLABORADOR</h2>
+                    <h3>Tarefas</h3>
                     <div className="information">
                         <img src={""} alt="" />
-                        <p>Contato</p>
+                        <p>Avaliacao do Gestor -PO-</p>
                     </div>
                 </div>
             </div>

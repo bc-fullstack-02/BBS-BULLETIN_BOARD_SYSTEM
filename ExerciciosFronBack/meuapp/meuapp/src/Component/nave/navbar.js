@@ -1,4 +1,5 @@
 import react from 'react';
+
 import logo from '../../IMG/logo.png';
 function navbar({ openModal }){
     return(

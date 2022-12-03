@@ -43,28 +43,47 @@ button {
 }
 
 nav {
-    background: rgb(82, 113, 255);
-    background: radial-gradient(circle, rgba(82, 113, 255, 1) 0%, rgba(93, 251, 98, 1) 52%, rgba(96, 123, 250, 1) 71%, rgba(109, 134, 244, 1) 100%);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
+    height: 89px;
+    background: rgb(82, 113, 255);
+    padding: 0 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 
     .navConteudo {
-        max-width: $max-width;
-        width: 100%;
-        height: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-gap: 10px;
+        list-style: none;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(10, 10, 10);
+        justify-content: space-between;
         align-items: center;
-        justify-items: center;
-        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
         background: rgb(82, 113, 255);
-        background: radial-gradient(circle, rgba(82, 113, 255, 1) 0%, rgba(93, 251, 98, 1) 52%, rgba(96, 123, 250, 1) 71%, rgba(109, 134, 244, 1) 100%);
-        border-radius: 15px;
+    }
 
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-decoration: none;
+        color: rgb(10, 10, 10);
+        background: rgb(238, 233, 233);
+        border-bottom: 1px solid #ccc;
+        border-radius: 16px;
+        box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+        max-width: 200px;
 
     }
 
@@ -157,7 +176,7 @@ nav {
 
 //fim input
 //incio da secao de usuarios e listagem de produtos, estou comentando para nao dar erro no codigo ou nao me perder nessa jossa
-.UsuariosContainer{
+.UsuariosContainer {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
@@ -167,7 +186,8 @@ nav {
     height: 100%;
     justify-content: center;
     align-items: center;
-    .card{
+
+    .card {
         background-color: aliceblue;
         border-radius: 10px;
         padding: 10px;
@@ -175,7 +195,7 @@ nav {
         font-weight: bold;
         text-align: center;
         box-shadow: #f0f0f5 0px 0px 10px;
-        
+
     }
 }
 

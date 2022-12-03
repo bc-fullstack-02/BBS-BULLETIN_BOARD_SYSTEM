@@ -1,8 +1,8 @@
+import React from 'react';
+import Nav from "../../Component/nave/navbar";
 const Dash = () => {
   return (
-    <div>
-      <h1>Dash</h1>
-    </div>
+    <Nav />
   );
 }
 export default Dash;
