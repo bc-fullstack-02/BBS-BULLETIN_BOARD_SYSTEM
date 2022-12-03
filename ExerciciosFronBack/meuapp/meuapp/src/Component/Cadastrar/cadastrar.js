@@ -15,7 +15,7 @@ function Cadastrar({ setIsLogin }) {
                     <label>DATA DE NASCIMENTO</label>
                     <input type="date" name="date" id="date" required />
                     <label>SEXO</label>
-                    <select name="sexo" id="sexo">
+                    <select name="sexo" id="sexo" className="SELECAO">
                         <option value="masculino">Masculino</option>
                         <option value="feminino">Feminino</option>
                         <option value="outro">Outro</option>

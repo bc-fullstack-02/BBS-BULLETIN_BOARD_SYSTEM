@@ -15,7 +15,7 @@ function Login({setIsLogin}) {
                     <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
                     <button>ENTRAR</button><br></br>
                     <div className="Cadastro">
-                        <Link onClick={setIsLogin}>Criar conta</Link>
+                        <Link onClick={setIsLogin}>Nao possui conta? crie agora</Link>
                     </div>
                 </form>
             </div>

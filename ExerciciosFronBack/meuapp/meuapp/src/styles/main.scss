@@ -54,7 +54,7 @@ nav {
 
     .navConteudo {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 10px;
         list-style: none;
         text-align: center;
@@ -177,25 +177,48 @@ nav {
 //fim input
 //incio da secao de usuarios e listagem de produtos, estou comentando para nao dar erro no codigo ou nao me perder nessa jossa
 .UsuariosContainer {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-    padding: 20px;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    height: 89px;
+    padding: 0 30px;
+    margin: 15px;
+
+
 
     .card {
-        background-color: aliceblue;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 15px;
-        font-weight: bold;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        list-style: none;
         text-align: center;
-        box-shadow: #f0f0f5 0px 0px 10px;
-
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(10, 10, 10);
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: rgb(241, 241, 245);
+        border-radius: 16px;
+    }
+    /*hover nos cards*/
+    .card:hover {
+        background: rgb(8, 61, 235);
+        color: #f0f0f5;
+    }
+    h2{
+        font-size: 15px;
+        color: rgb(224, 202, 202);
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
     }
 }
 
@@ -232,6 +255,48 @@ nav {
             align-items: center;
             justify-content: center;
             display: flex;
+        }
+        .SELECAO{
+            width: 9em;
+            height: 2em auto;
+            font-family: pfs-bold;
+            color: #86919a;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            background-color: #f0f0f5;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            
+            option{
+                padding: 1em;
+                font-family: pfs-bold;
+                color: #86919a;
+                text-transform: uppercase;
+                font-size: 1.2em;
+                background-color: #f0f0f5;
+                border: none;
+            }
+        }
+        #date{
+            width: 11em;
+            height: 2em auto;
+            font-family: pfs-bold;
+            color: #86919a;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            background-color: #f0f0f5;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         form {
@@ -284,6 +349,7 @@ nav {
                         color: #f0f0f5;
                     }
                 }
+                
             }
 
             button {
