@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from '../../IMG/logo.png';
 
 function Cadastrar({ setIsLogin }) {
     return (
         <div className="Background">
             <div className="modal">
-                <h1>CRIAR UMA NOVA CONTA</h1>
-                
+                <h1>BEM VINDO</h1>
+                <img src={logo} alt="Logo" />
                 <form >
                     <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
                     <input type="text" name="Sobrenome" placeholder="Digite seu sobrenome" required />

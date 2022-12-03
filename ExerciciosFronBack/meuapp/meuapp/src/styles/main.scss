@@ -73,6 +73,8 @@ nav {
         background: rgb(82, 113, 255);
     }
 
+
+
     button {
         display: block;
         width: 100%;
@@ -207,12 +209,14 @@ nav {
         background: rgb(241, 241, 245);
         border-radius: 16px;
     }
+
     /*hover nos cards*/
     .card:hover {
         background: rgb(8, 61, 235);
         color: #f0f0f5;
     }
-    h2{
+
+    h2 {
         font-size: 15px;
         color: rgb(224, 202, 202);
         font-weight: bold;
@@ -242,7 +246,16 @@ nav {
         width: 100%;
         padding: 15px;
         border-radius: 15px;
-        box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 15px 15px 15px 150px rgba(7, 2, 53, 0.2);
+
+        img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+            display: block;
+            margin-bottom: 15px;
+        }
 
         h1 {
             font-size: 30px;
@@ -256,7 +269,8 @@ nav {
             justify-content: center;
             display: flex;
         }
-        .SELECAO{
+
+        .SELECAO {
             width: 9em;
             height: 2em auto;
             font-family: pfs-bold;
@@ -271,8 +285,8 @@ nav {
             margin-top: 20px;
             margin-left: 20px;
             margin-right: 20px;
-            
-            option{
+
+            option {
                 padding: 1em;
                 font-family: pfs-bold;
                 color: #86919a;
@@ -282,7 +296,8 @@ nav {
                 border: none;
             }
         }
-        #date{
+
+        #date {
             width: 11em;
             height: 2em auto;
             font-family: pfs-bold;
@@ -349,7 +364,7 @@ nav {
                         color: #f0f0f5;
                     }
                 }
-                
+
             }
 
             button {

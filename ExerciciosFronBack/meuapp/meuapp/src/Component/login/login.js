@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import logo from '../../IMG/logo.png';
 function Login({setIsLogin}) {
     return (
 
@@ -9,6 +9,7 @@ function Login({setIsLogin}) {
             <div className="modal">
 
                 <h1>ENTRAR</h1>
+                <img src={logo} alt="Logo" />
                 <form>
                     <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
                     <input type="text" name="email" id="email" placeholder="Digite seu email" required />
