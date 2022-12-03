@@ -1,7 +1,7 @@
 import React from "react";
 function CardUser() {
     return (
-        <section className="Users">
+        
             <div className="UsuariosContainer">
                 <div className="card">
                     <h2>NOME USUARIO</h2>
@@ -12,7 +12,7 @@ function CardUser() {
                     </div>
                 </div>
             </div>
-        </section>
+       
     );
 }
 export default CardUser;

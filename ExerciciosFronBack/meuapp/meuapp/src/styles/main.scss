@@ -157,53 +157,25 @@ nav {
 
 //fim input
 //incio da secao de usuarios e listagem de produtos, estou comentando para nao dar erro no codigo ou nao me perder nessa jossa
-.Users {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
+.UsuariosContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
     align-items: center;
-    margin: 15px 15px 15px 15px;
-
-    .UsuariosContainer {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        gap: 10px;
-        align-items: center;
-        justify-items: center;
-
-    }
-
-    .card {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: rgb(240, 243, 245);
-        border-radius: 15px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 16px;
-        }
-
-        h1 {
-            font-size: 20px;
-            color: rgb(8, 61, 235);
-
-            font-weight: bold;
-        }
-
-        p {
-            font-size: 15px;
-            color: rgb(8, 61, 235);
-
-            font-weight: bold;
-        }
+    .card{
+        background-color: aliceblue;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: #f0f0f5 0px 0px 10px;
+        
     }
 }
 
@@ -220,15 +192,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    .modal{
+
+    .modal {
         background-color: #f0f0f5;
         max-width: 600px;
         width: 100%;
         padding: 15px;
         border-radius: 15px;
         box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
-        h1{
+
+        h1 {
             font-size: 30px;
             color: rgb(8, 61, 235);
             font-weight: bold;
@@ -240,14 +213,15 @@ nav {
             justify-content: center;
             display: flex;
         }
-        form{
+
+        form {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            
-            label{
+
+            label {
                 font-size: 20px;
                 color: rgb(8, 61, 235);
                 font-weight: bold;
@@ -255,7 +229,8 @@ nav {
                 text-transform: uppercase;
                 font-family: 'Roboto', sans-serif;
             }
-            input{
+
+            input {
                 height: 40px;
                 width: 100%;
                 padding: 0 20px;
@@ -266,11 +241,13 @@ nav {
                 background: rgb(238, 233, 233);
                 border: none;
                 border-radius: 16px;
-                &:hover{
+
+                &:hover {
                     background: rgb(8, 61, 235);
                     color: #f0f0f5;
                 }
-                select{
+
+                select {
                     height: 40px;
                     width: 100%;
                     padding: 0 20px;
@@ -281,13 +258,15 @@ nav {
                     background: rgb(238, 233, 233);
                     border: none;
                     border-radius: 16px;
-                    &:hover{
+
+                    &:hover {
                         background: rgb(8, 61, 235);
                         color: #f0f0f5;
                     }
                 }
             }
-            button{
+
+            button {
                 height: 40px;
                 width: 100%;
                 padding: 0 20px;
@@ -298,18 +277,21 @@ nav {
                 background: rgb(238, 233, 233);
                 border: none;
                 border-radius: 16px;
-                &:hover{
+
+                &:hover {
                     background: rgb(8, 61, 235);
                     color: #f0f0f5;
                 }
             }
-            .Cadastro{
+
+            .Cadastro {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
-                a{
+
+                a {
                     font-size: 15px;
                     color: rgb(8, 61, 235);
                     font-weight: bold;
@@ -320,8 +302,9 @@ nav {
             }
         }
     }
-    
+
 }
-.CADASTRAR{
-        display: block;
+
+.CADASTRAR {
+    display: block;
 }

@@ -20,7 +20,16 @@ function Home() {
       <Nav openModal={openModal}/>
       <Input />
       <CardUser />
+      <CardUser />
+      <CardUser />
+      <CardUser />
+      <CardUser />
+      <CardUser />
+      
 
+
+
+    
       {isModalOpen ? <ModalControllerLogin /> : null}
     </>
   );
