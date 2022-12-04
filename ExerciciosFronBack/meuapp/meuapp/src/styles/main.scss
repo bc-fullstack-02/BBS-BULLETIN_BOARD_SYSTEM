@@ -406,6 +406,63 @@ nav {
 
 }
 
-.CADASTRAR {
-    display: block;
+//input do usuario
+.inputUSER{
+    height: 40px;
+    width: 100%;
+    padding: 0 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    h1{
+        font-size: 30px;
+        color: rgb(8, 61, 235);
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .Usuarios{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            a{
+                font-size: 15px;
+                color: rgb(8, 61, 235);
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: 'Roboto', sans-serif;
+            }
+            input{
+                height: 40px;
+                width: 100%;
+                padding: 0 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(10, 10, 10);
+                background: rgb(238, 233, 233);
+                border: none;
+                border-radius: 16px;
+                &:hover{
+                    background: rgb(8, 61, 235);
+                    color: #f0f0f5;
+                }
+            }
+        }
+    }
 }
