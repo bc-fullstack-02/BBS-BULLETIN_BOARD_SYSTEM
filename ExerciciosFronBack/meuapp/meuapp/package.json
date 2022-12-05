@@ -10,6 +10,8 @@
     "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.40.0",
+    "react-hooks": "^1.0.1",
     "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.5",
@@ -39,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }

@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import logo from '../../IMG/logo.png';
 
 function Cadastrar({ setIsLogin }) {
+    function verificarsenha(params) {
+        const senha = document.getElementById("senha").value;
+        const confirmaSenha = document.getElementById("confirmaSenha").value;
+        const DisdableCADA = document.getElementById("DisdableCADA");
+        if (senha === confirmaSenha) {
+            DisdableCADA.disabled = false;
+        }
+        else {
+
+            DisdableCADA.disabled = true;
+        }
+    }
+
+
     return (
         <div className="Background">
             <div className="modal">
@@ -12,17 +26,9 @@ function Cadastrar({ setIsLogin }) {
                     <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
                     <input type="text" name="Sobrenome" placeholder="Digite seu sobrenome" required />
                     <input type="text" name="email" id="email" placeholder="Digite seu email" required />
-                    <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
-                    <label>DATA DE NASCIMENTO</label>
-                    <input type="date" name="date" id="date" required />
-                    <label>SEXO</label>
-                    <select name="sexo" id="sexo" className="SELECAO">
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="outro">Outro</option>
-                    </select>
-
-                    <button>CADASTRAR</button><br></br>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required />
+                    <input type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Confirme sua senha" required />
+                    <button id="DisdableCADA" onClick={verificarsenha}>CADASTRAR</button><br></br>
                     <div className="Cadastro">
                         <Link onClick={setIsLogin}>JA TENHO CONTA</Link>
                     </div>

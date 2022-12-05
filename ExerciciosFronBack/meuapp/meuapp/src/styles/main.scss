@@ -171,6 +171,65 @@ nav {
                 }
             }
 
+            select {
+                height: 40px;
+                width: 100%;
+                padding: 0 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(10, 10, 10);
+                background: rgb(238, 233, 233);
+                border: none;
+                border-radius: 16px;
+
+                &:hover {
+                    background: rgb(8, 61, 235);
+                    color: #f0f0f5;
+
+                }
+            }
+
+            option {
+                height: 40px;
+                width: 100%;
+                padding: 0 20px;
+                border: none;
+                font-size: 15px;
+                font-weight: bold;
+                color: rgb(10, 10, 10);
+                background: rgb(238, 233, 233);
+                border: none;
+                border-radius: 16px;
+
+                &:hover {
+                    background: rgb(8, 61, 235);
+                    color: #f0f0f5;
+
+                }
+            }
+        }
+
+        button {
+            height: 40px;
+            width: 100%;
+            padding: 0 20px;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(10, 10, 10);
+            background: rgb(238, 233, 233);
+            border: none;
+            border-radius: 16px;
+            margin-top: 20px;
+            box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.2);
+            max-width: 200px;
+
+            &:hover {
+                background: rgb(8, 61, 235);
+                color: #f0f0f5;
+
+            }
         }
 
     }
@@ -179,46 +238,35 @@ nav {
 //fim input
 //incio da secao de usuarios e listagem de produtos, estou comentando para nao dar erro no codigo ou nao me perder nessa jossa
 .UsuariosContainer {
-    display: flex;
+    background-color: #9bbad3;
+    display: flexbox;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 89px;
+    height: 19vh;
+    width: 250px;
     padding: 0 30px;
-    margin: 15px;
-
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    border-radius: 12px;
 
     .card {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
         list-style: none;
         text-align: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        margin-left: 15px;
-        margin-right: 15px;
-        padding: 0 20px;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(10, 10, 10);
-        justify-content: space-between;
+        justify-items: center;
         align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        background: rgb(241, 241, 245);
-        border-radius: 16px;
-    }
+        justify-content: center;
+        margin-top: 15px;
+        padding: 15px;
 
-    /*hover nos cards*/
-    .card:hover {
-        background: rgb(8, 61, 235);
-        color: #f0f0f5;
     }
 
     h2 {
         font-size: 15px;
-        color: rgb(224, 202, 202);
+        color: rgb(4, 21, 41);
         font-weight: bold;
         text-decoration: none;
         text-transform: uppercase;
@@ -404,65 +452,4 @@ nav {
         }
     }
 
-}
-
-//input do usuario
-.inputUSER{
-    height: 40px;
-    width: 100%;
-    padding: 0 20px;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    h1{
-        font-size: 30px;
-        color: rgb(8, 61, 235);
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: 'Roboto', sans-serif;
-        margin: 10px 0;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-
-    }
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        .Usuarios{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            a{
-                font-size: 15px;
-                color: rgb(8, 61, 235);
-                font-weight: bold;
-                text-decoration: none;
-                text-transform: uppercase;
-                font-family: 'Roboto', sans-serif;
-            }
-            input{
-                height: 40px;
-                width: 100%;
-                padding: 0 20px;
-                border: none;
-                font-size: 15px;
-                font-weight: bold;
-                color: rgb(10, 10, 10);
-                background: rgb(238, 233, 233);
-                border: none;
-                border-radius: 16px;
-                &:hover{
-                    background: rgb(8, 61, 235);
-                    color: #f0f0f5;
-                }
-            }
-        }
-    }
 }

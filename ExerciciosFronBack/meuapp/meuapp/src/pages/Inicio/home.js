@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 
 import Nav from "../../Component/nave/navbar";
@@ -24,8 +25,7 @@ function Home() {
       <CardUser />
       <CardUser />
       <CardUser />
-      <CardUser />
-      
+      <CardUser />    
 
 
 
