@@ -1,13 +1,23 @@
  
 //import scss de style 
 import css from './main.scss';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
+
+import Home from './Inicio/Home';
+import Login from './Inicio/login';
+import Perfil from './Inicio/Perfil';
 
 function App() {
-  /*usando o scss*/
+
+ 
   return (
-    <div className={css.App}>
-      <h1>React</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/perfil" element={<Perfil/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
