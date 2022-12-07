@@ -5,7 +5,7 @@ import logo from '../../IMG/logo.png';
 
 function navbar ({ openModal }){
   
-    const [user, setUser] = UseContext(userContext);
+    
   
         return(           
                 <nav>

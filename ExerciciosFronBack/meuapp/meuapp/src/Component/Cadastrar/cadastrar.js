@@ -21,7 +21,14 @@ function Cadastrar({ setIsLogin }) {
         <div className="Background">
             <div className="modal">
                 <h1>BEM VINDO</h1>
-                <img src={logo} alt="Logo" />
+               
+               
+               
+               
+               
+               
+               
+               <img src={logo} alt="Logo" />
                 <form >
                     <input type="text" name="name" id="name" placeholder="Digite seu nome" required />
                     <input type="text" name="Sobrenome" placeholder="Digite seu sobrenome" required />
