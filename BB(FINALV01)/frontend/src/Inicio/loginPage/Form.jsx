@@ -77,39 +77,40 @@ const Form = () => {
       setPageType("login");
     }
   };
-
-  const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+async function login(values, onSubmitProps) {
+  try {
+    const response = await fetch("http://localhost:3001/auth/login", {
       method: "POST",
-     headers:  { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(values),
-
     });
-    const loggedIn = await loggedInResponse.json();
+    
+    const data = await response.json();
+    
     onSubmitProps.resetForm();
-    if (loggedIn) {
-      dispatch(
-        setLogin({
-          user: loggedIn.user,
-          token: loggedIn.token,
-        })
-      );
+    if (data) {
+      dispatch(setLogin(
+       {
+        user: data.user,
+        token: data.token,
+       }
+      ));
       navigate("/home");
     }
-  };
-/*Testei o logic con uma  function e o error foi para dispacth ERROR (in promise) TypeError: Cannot read properties of undefined (reading 'type')
-ja no const o error e o mesmo An unhandled error was caught from submitForm() TypeError: Cannot read properties of undefined (reading 'type')
-function handleFormSubmit(values, onSubmitProps) {
+  } catch (error) {
+    console.log(error);
+  }
+}
+  
+
+  const handleFormSubmit = async (values, onSubmitProps) => {
     if (isLogin) {
       login(values, onSubmitProps);
     } else {
       register(values, onSubmitProps);
     }
-  }
-*/
-  const handleFormSubmit = async (values, onSubmitProps) => {
-    if (isLogin) await login(values, onSubmitProps);
-    if (isRegister) await register(values, onSubmitProps);
   };
 
   return (
