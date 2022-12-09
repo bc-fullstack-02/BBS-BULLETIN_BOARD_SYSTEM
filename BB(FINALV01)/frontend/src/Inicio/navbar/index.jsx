@@ -56,7 +56,7 @@ const Navbar = () => {
                         },
                     }}
                 >
-                    BBS SYSTEM V01
+                    BBS
                 </Typography>
                 {isNonMobileScreens && (
                     <FlexBetween
@@ -73,7 +73,7 @@ const Navbar = () => {
                 )}
             </FlexBetween>
 
-            {/* DESKTOP NAV */}
+
             {isNonMobileScreens ? (
                 <FlexBetween gap="2rem">
                     <IconButton onClick={() => dispatch(setMode())}>
@@ -131,7 +131,7 @@ const Navbar = () => {
                     minWidth="300px"
                     backgroundColor={background}
                 >
-                    
+
                     <Box display="flex" justifyContent="flex-end" p="1rem">
                         <IconButton
                             onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}
@@ -140,7 +140,7 @@ const Navbar = () => {
                         </IconButton>
                     </Box>
 
-                    
+                    {/* MENU ITEMS */}
                     <FlexBetween
                         display="flex"
                         flexDirection="column"

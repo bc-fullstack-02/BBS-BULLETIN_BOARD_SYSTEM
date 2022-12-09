@@ -28,7 +28,7 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-app.use("/assets", express.static(path.join(__dirname, "public/images")));
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -49,7 +49,7 @@ app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
 
-const PORT = process.env.PORT || 6001;
+const PORT = process.env.PORT || 6666;
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
@@ -57,7 +57,6 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-    //User.insertMany(users);
-    //Post.insertMany(posts);
+    
   })
   .catch((error) => console.log(`${error} did not connect`));

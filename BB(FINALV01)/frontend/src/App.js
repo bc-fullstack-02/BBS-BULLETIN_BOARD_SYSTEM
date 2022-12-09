@@ -1,13 +1,13 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
-import Home from "Inicio/Home";
-import Login from "Inicio/Login";
-import Perfil from "Inicio/Perfil";
-import Navbar from "Inicio/Navbar";
+
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "theme";
+import HomePage from 'Inicio/homePage';
+import  LoginPage  from 'Inicio/loginPage';
+import  ProfilePage from 'Inicio/perfil';
 
 
 
@@ -20,10 +20,9 @@ function App() {
       <ThemeProvider theme={theme}>
          < CssBaseline />
         <Routes>
-          <Route path="/" element={<Navbar />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/perfil/userId" element={<Perfil />} />
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/perfil/:userId" element={<ProfilePage />} />
         </Routes>
        
         </ThemeProvider>

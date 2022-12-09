@@ -29,7 +29,7 @@ export const authSlice = createSlice({
         if (state.user) {
             state.user.friends = action.payload.friends;
         } else {
-            console.log("Usuario nao existe para adicionar amigos");
+            console.log("User does not exist, cannot set friends");
         }
     },
     setPosts: (state, action) => {
