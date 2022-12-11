@@ -24,6 +24,37 @@ Dentro da pasta POSTS temos os controles dos nossos posts do sistema, ler todos 
 Dentro da pasta USERS temos  os nossos usuários,basicamente com as mesmas especificações  DA PASTA POSTS.
 
 
+## FRONTEND(BBS)
+
+## PASTA COMPONENTS
+Nesta pasta nós temos alguns padrões do CSS(CSS BASELINE) de nosso projeto,Para imagens lista de amigos etc.
+
+## PASTA INICIO
+Na pasta de início temos os estados de nossa aplicação, HomePage(página inicial),  login page(página de login)que contém o formulário de cadastro login(form), navegar(a nossa barra de navegação) e claro nossa página de perfil , Junto dos nossos Widgets, usados na estilização da nossa aplicação.
+## PASTA STATE
+Nesta página temos o gerenciamento dos estados da nossa aplicação,login logout, posts, tudo que está ligado diretamente ao backend passará por esta página. 
+Na theme está o tema da nossa aplicação.
+
+
+
+
+## Referência
+
+ - [CSS BASELINE](https://mui.com/material-ui/react-css-baseline/)
+ - [USEMEMO](https://www.w3schools.com/react/react_usememo.asp)
+ - [USESELECTOR](https://react-redux.js.org/api/hooks#useselector)
+ - [HOOKS](https://react-redux.js.org/api/hooks)
+ - [SLICE](https://react-redux.js.org/tutorials/quick-start#create-a-redux-state-slice)
+ - [FORMIK](https://formik.org/docs/examples/with-material-ui)
+ 
+ ## CURSOS E MATERIAIS EXTRAS
+  - [CBF CURSOS ](https://www.cursou.com.br/informatica/programacao/javascript/react-biblioteca-javascript-interfaces-usuario/)
+  - [Kura Web ](https://www.cursou.com.br/informatica/react-redux/)
+  - [Matheus Bathist ](https://www.youtube.com/watch?v=sHyoMWnnLGU&t=6s&ab_channel=MatheusBattisti-HoradeCodar)
+  - [PDFS ](https://drive.google.com/drive/folders/1g0FYNhOlK7bvZNO6o1Ko4XcuZMg9uLM7)
+  
+
+
 
 
 
