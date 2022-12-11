@@ -1,12 +1,5 @@
 
 
-# Anime API
-
-Bem vamos a descricao desse pequeno projeto(provavelmente o barbar vai me matar por nao fazer um backend de uma rede social), 
-bem a ideia desse projeto e criar um backend e um front, para o lancamento de novos animes da temporada, tipo o crunchroll.
-Ao final irei entregar com o mobile uma aplicaçao semelhante a essa, é claro não tenho grana para pagar um servidor sinistro.
-Mas veremos com isso ira acabar.
-
 ## BACKEND(BBS)
 
 ## PASTA CONTROLLERS
