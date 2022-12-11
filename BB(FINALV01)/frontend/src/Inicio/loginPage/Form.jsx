@@ -11,7 +11,7 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import setLogin from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
@@ -50,7 +50,7 @@ const initialValuesLogin = {
 const Form = () => {
   const [pageType, setPageType] = useState("login");
   const { palette } = useTheme();
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
   const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
@@ -89,7 +89,8 @@ const Form = () => {
     onSubmitProps.resetForm();
     if (loggedIn) {
      axios.defaults.headers.common['Authorization'] = `Bearer ${loggedIn.token}, ${loggedIn.user._id}`;
-     
+    
+     setLogin(loggedIn.token, loggedIn.user._id);
       navigate("/home");
     }
   };
