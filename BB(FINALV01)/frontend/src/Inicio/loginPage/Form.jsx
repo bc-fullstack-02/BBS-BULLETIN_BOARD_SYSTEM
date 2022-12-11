@@ -12,9 +12,10 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import  setLogin  from "state";
+import setLogin from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
+import  axios  from 'axios';
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -56,7 +57,7 @@ const Form = () => {
   const isRegister = pageType === "register";
 
   const register = async (values, onSubmitProps) => {
-
+    //
     const formData = new FormData();
     for (let value in values) {
       formData.append(value, values[value]);
@@ -77,42 +78,30 @@ const Form = () => {
       setPageType("login");
     }
   };
-async function login(values, onSubmitProps) {
-  try {
-    const response = await fetch("http://localhost:3001/auth/login", {
+
+  const login = async (values, onSubmitProps) => {
+    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     });
-    
-    const data = await response.json();
-    
+    const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
-    if (data) {
-      dispatch(setLogin(
-       {
-        user: data.user,
-        token: data.token,
-       }
-      ));
+    if (loggedIn) {
+     axios.defaults.headers.common['Authorization'] = `Bearer ${loggedIn.token}, ${loggedIn.user._id}`;
+     
       navigate("/home");
     }
-  } catch (error) {
-    console.log(error);
-  }
-}
+  };
   
-
-  const handleFormSubmit = async (values, onSubmitProps) => {
+  const handleFormSubmit = (values, onSubmitProps) => {
     if (isLogin) {
       login(values, onSubmitProps);
     } else {
       register(values, onSubmitProps);
     }
-  };
-
+  }
+  
   return (
     <Formik
       onSubmit={handleFormSubmit}
@@ -143,7 +132,7 @@ async function login(values, onSubmitProps) {
                 <TextField
                   label="First Name"
                   onBlur={handleBlur}
-                  onChange={handleChange}
+                  onChange={handleChange.bind(this)}
                   value={values.firstName}
                   name="firstName"
                   error={
@@ -155,7 +144,7 @@ async function login(values, onSubmitProps) {
                 <TextField
                   label="Last Name"
                   onBlur={handleBlur}
-                  onChange={handleChange}
+                  onChange={handleChange.bind(this)}
                   value={values.lastName}
                   name="lastName"
                   error={Boolean(touched.lastName) && Boolean(errors.lastName)}
@@ -165,7 +154,7 @@ async function login(values, onSubmitProps) {
                 <TextField
                   label="Location"
                   onBlur={handleBlur}
-                  onChange={handleChange}
+                  onChange={handleChange.bind(this)}
                   value={values.location}
                   name="location"
                   error={Boolean(touched.location) && Boolean(errors.location)}
@@ -175,7 +164,7 @@ async function login(values, onSubmitProps) {
                 <TextField
                   label="Occupation"
                   onBlur={handleBlur}
-                  onChange={handleChange}
+                  onChange={handleChange.bind(this)}
                   value={values.occupation}
                   name="occupation"
                   error={
@@ -223,7 +212,7 @@ async function login(values, onSubmitProps) {
             <TextField
               label="Email"
               onBlur={handleBlur}
-              onChange={handleChange}
+              onChange={handleChange.bind(this)}
               value={values.email}
               name="email"
               error={Boolean(touched.email) && Boolean(errors.email)}
@@ -234,7 +223,7 @@ async function login(values, onSubmitProps) {
               label="Password"
               type="password"
               onBlur={handleBlur}
-              onChange={handleChange}
+              onChange={handleChange.bind(this)}
               value={values.password}
               name="password"
               error={Boolean(touched.password) && Boolean(errors.password)}
@@ -282,5 +271,6 @@ async function login(values, onSubmitProps) {
     </Formik>
   );
 };
+
 
 export default Form;

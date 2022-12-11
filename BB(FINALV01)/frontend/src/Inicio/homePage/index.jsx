@@ -1,5 +1,5 @@
 import { Box, useMediaQuery } from "@mui/material";
-import  { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Navbar from "Inicio/navbar";
 import UserWidget from "Inicio/widgets/UserWidget";
 import MyPostWidget from "Inicio/widgets/MyPostWidget";
@@ -9,7 +9,7 @@ import FriendListWidget from "Inicio/widgets/FriendListWidget";
 
 const HomePage = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-    const { _id, picturePath } = useSelector((state) => state.user);
+    const{picturePath, _id} = useSelector((state) => state.user);
 
     return (
         <Box>
