@@ -23,6 +23,16 @@ Dentro da pasta AUTH temos a autenticação de nossa rota,que recebe os respecti
 Dentro da pasta POSTS temos os controles dos nossos posts do sistema, ler todos fazer alterações(UPDATE).
 Dentro da pasta USERS temos  os nossos usuários,basicamente com as mesmas especificações  DA PASTA POSTS.
 
+## Referência
+
+ - [MULTER](https://www.npmjs.com/package/multer)
+ - [EXPRESS](https://www.npmjs.com/package/express)
+ - [BODY_PARSER](https://www.npmjs.com/package/body-parser)
+ - [MONGOOSE](https://www.npmjs.com/package/mongoose)
+ - [CORS](https://www.npmjs.com/package/cors)
+ - [DOTENV](https://www.npmjs.com/package/dotenv)
+ - [HELMET](https://www.npmjs.com/package/helmet)
+ - [MORGAN](https://www.npmjs.com/package/morgan)
 
 ## FRONTEND(BBS)
 
@@ -54,7 +64,11 @@ Na theme está o tema da nossa aplicação.
   - [PDFS ](https://drive.google.com/drive/folders/1g0FYNhOlK7bvZNO6o1Ko4XcuZMg9uLM7)
   
 
+## Stack utilizada
 
+**Front-end:** REACT(REDUX),CSSBASILENE,JAVASCRIPT
+
+**Back-end:** NODE , EXPRESS, JWT Bycrypt, AXIOS, MULTER, DOTENV, MORGAN, CORS, BODY_PARSER.
 
 
 
@@ -71,24 +85,6 @@ Na theme está o tema da nossa aplicação.
 
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bene-tesla/)
-
-
-## Stack utilizada
-
-**Front-end:** REACT(REDUX),CSSBASILENE,JAVASCRIPT
-
-**Back-end:** NODE , EXPRESS, JWT Bycrypt, AXIOS, MULTER, DOTENV, MORGAN, CORS, BODY_PARSER.
-
-## Referência
-
- - [MULTER](https://www.npmjs.com/package/multer)
- - [EXPRESS](https://www.npmjs.com/package/express)
- - [BODY_PARSER](https://www.npmjs.com/package/body-parser)
- - [MONGOOSE](https://www.npmjs.com/package/mongoose)
- - [CORS](https://www.npmjs.com/package/cors)
- - [DOTENV](https://www.npmjs.com/package/dotenv)
- - [HELMET](https://www.npmjs.com/package/helmet)
- - [MORGAN](https://www.npmjs.com/package/morgan)
 
 
 ## Licença
