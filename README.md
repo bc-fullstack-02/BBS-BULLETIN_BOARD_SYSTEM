@@ -17,8 +17,6 @@ USE:responsável por setar o nosso usuário, pegando os métodos presentes no po
 Na pasta de data temos apenas os valores iniciais dos nossos registros do backend,foi esta pagina que usei como teste para o cadastro inicial dos nossos usuários.
 ## PASTA MIDDLEWARE
 Esta pasta é o nosso intermédio entre todo o nosso sistema,nela temos a verificação do token e o sistema de acesso ao nosso sistema.
-
-## PASTA MIDDLEWARE
 Na pasta modelo temos o nosso schema, aqui e onde está a nossa conexão com MongoDB, dentro desta pasta temos a post:nela se encontra o nosso sistema de posts e temos a nossa pasta de utilizadores la e onde inserimos as informações dos nossos utilizadores.
 ## PASTA ROUTES
 Dentro da pasta AUTH temos a autenticação de nossa rota,que recebe os respectivos valores do auth que está presente na pasta de controllers.
