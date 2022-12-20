@@ -11,11 +11,10 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-//import { useDispatch } from "react-redux";
-import setLogin from "state";
+import { useDispatch } from "react-redux";
+import { setLogin } from "state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "components/FlexBetween";
-import  axios  from 'axios';
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -50,14 +49,14 @@ const initialValuesLogin = {
 const Form = () => {
   const [pageType, setPageType] = useState("login");
   const { palette } = useTheme();
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
   const register = async (values, onSubmitProps) => {
-    //
+    // this allows us to send form info with image
     const formData = new FormData();
     for (let value in values) {
       formData.append(value, values[value]);
@@ -88,21 +87,21 @@ const Form = () => {
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {
-     axios.defaults.headers.common['Authorization'] = `Bearer ${loggedIn.token}, ${loggedIn.user._id}`;
-    
-     setLogin(loggedIn.token, loggedIn.user._id);
+      dispatch(
+        setLogin({
+          user: loggedIn.user,
+          token: loggedIn.token,
+        })
+      );
       navigate("/home");
     }
   };
-  
-  const handleFormSubmit = (values, onSubmitProps) => {
-    if (isLogin) {
-      login(values, onSubmitProps);
-    } else {
-      register(values, onSubmitProps);
-    }
-  }
-  
+
+  const handleFormSubmit = async (values, onSubmitProps) => {
+    if (isLogin) await login(values, onSubmitProps);
+    if (isRegister) await register(values, onSubmitProps);
+  };
+
   return (
     <Formik
       onSubmit={handleFormSubmit}
@@ -133,7 +132,7 @@ const Form = () => {
                 <TextField
                   label="First Name"
                   onBlur={handleBlur}
-                  onChange={handleChange.bind(this)}
+                  onChange={handleChange}
                   value={values.firstName}
                   name="firstName"
                   error={
@@ -145,7 +144,7 @@ const Form = () => {
                 <TextField
                   label="Last Name"
                   onBlur={handleBlur}
-                  onChange={handleChange.bind(this)}
+                  onChange={handleChange}
                   value={values.lastName}
                   name="lastName"
                   error={Boolean(touched.lastName) && Boolean(errors.lastName)}
@@ -155,7 +154,7 @@ const Form = () => {
                 <TextField
                   label="Location"
                   onBlur={handleBlur}
-                  onChange={handleChange.bind(this)}
+                  onChange={handleChange}
                   value={values.location}
                   name="location"
                   error={Boolean(touched.location) && Boolean(errors.location)}
@@ -165,7 +164,7 @@ const Form = () => {
                 <TextField
                   label="Occupation"
                   onBlur={handleBlur}
-                  onChange={handleChange.bind(this)}
+                  onChange={handleChange}
                   value={values.occupation}
                   name="occupation"
                   error={
@@ -213,7 +212,7 @@ const Form = () => {
             <TextField
               label="Email"
               onBlur={handleBlur}
-              onChange={handleChange.bind(this)}
+              onChange={handleChange}
               value={values.email}
               name="email"
               error={Boolean(touched.email) && Boolean(errors.email)}
@@ -224,7 +223,7 @@ const Form = () => {
               label="Password"
               type="password"
               onBlur={handleBlur}
-              onChange={handleChange.bind(this)}
+              onChange={handleChange}
               value={values.password}
               name="password"
               error={Boolean(touched.password) && Boolean(errors.password)}
@@ -233,7 +232,7 @@ const Form = () => {
             />
           </Box>
 
-
+          {/* BUTTONS */}
           <Box>
             <Button
               fullWidth
@@ -272,6 +271,5 @@ const Form = () => {
     </Formik>
   );
 };
-
 
 export default Form;

@@ -78,5 +78,4 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   );
 };
 
-
 export default Friend;

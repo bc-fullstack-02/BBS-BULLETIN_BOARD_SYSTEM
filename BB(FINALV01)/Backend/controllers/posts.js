@@ -1,6 +1,7 @@
 import Post from "../models/Post.js";
 import User from "../models/User.js";
 
+/* CREATE POSTS */
 export const createPost = async (req, res) => {
   try {
     const { userId, description, picturePath } = req.body;
@@ -25,7 +26,7 @@ export const createPost = async (req, res) => {
   }
 };
 
-
+/* READ  ALL POSTS*/
 export const getFeedPosts = async (req, res) => {
   try {
     const post = await Post.find();
@@ -45,6 +46,7 @@ export const getUserPosts = async (req, res) => {
   }
 };
 
+/* UPDATE ALL POSTS */
 export const likePost = async (req, res) => {
   try {
     const { id } = req.params;

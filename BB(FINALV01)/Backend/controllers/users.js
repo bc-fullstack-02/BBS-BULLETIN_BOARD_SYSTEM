@@ -1,5 +1,6 @@
 import User from "../models/User.js";
-/*Estamos lendos os usuarios do banco de dados e retornando eles para o front end*/
+
+/* READ ALLL USERS */
 export const getUser = async (req, res) => {
   try {
     const { id } = req.params;
@@ -28,7 +29,8 @@ export const getUserFriends = async (req, res) => {
     res.status(404).json({ message: err.message });
   }
 };
-/*Estamos atualizando os dados do usuario no banco de dados*/
+
+/* UPDATE ALL FRIENDS */
 export const addRemoveFriend = async (req, res) => {
   try {
     const { id, friendId } = req.params;

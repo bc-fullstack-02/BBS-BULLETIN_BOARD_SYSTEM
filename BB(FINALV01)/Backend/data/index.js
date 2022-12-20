@@ -14,13 +14,13 @@ const userIds = [
 export const users = [
   {
     _id: userIds[0],
-    firstName: "BENE",
-    lastName: "TESLA",
-    email: "BENETESLA@gmail.com",
+    firstName: "test",
+    lastName: "me",
+    email: "aaaaaaa@gmail.com",
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p11.jpeg",
     friends: [],
-    location: "Brazil, CA",
+    location: "San Fran, CA",
     occupation: "Software Engineer",
     viewedProfile: 14561,
     impressions: 888822,
@@ -28,6 +28,22 @@ export const users = [
     updatedAt: 1115211422,
     __v: 0,
   },
+  {
+    _id: userIds[1],
+    firstName: "Steve",
+    lastName: "Ralph",
+    email: "thataaa@gmail.com",
+    password: "$!FEAS@!O)_IDJda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
+    picturePath: "p3.jpeg",
+    friends: [],
+    location: "New York, CA",
+    occupation: "Degenerate",
+    viewedProfile: 12351,
+    impressions: 55555,
+    createdAt: 1595589072,
+    updatedAt: 1595589072,
+    __v: 0,
+  }
   
 ];
 
@@ -35,21 +51,22 @@ export const posts = [
   {
     _id: new mongoose.Types.ObjectId(),
     userId: userIds[1],
-    firstName: "BEN",
-    lastName: "TESLA",
-    location: "Sao Paulo, BR",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    picturePath: "post3.jpeg",
-    userPicturePath: "p5.jpeg",
+    firstName: "Steve",
+    lastName: "Ralph",
+    location: "New York, CA",
+    description: "Some really long random description",
+    picturePath: "post1.jpeg",
+    userPicturePath: "p3.jpeg",
     likes: new Map([
-      [userIds[1], true],
-      [userIds[6], true],
+      [userIds[0], true],
+      [userIds[2], true],
       [userIds[3], true],
-      [userIds[5], true],
+      [userIds[4], true],
     ]),
     comments: [
-      "lorem  comment",
+      "random comment",
+      "another random comment",
+      "yet another random comment",
     ],
   },
   

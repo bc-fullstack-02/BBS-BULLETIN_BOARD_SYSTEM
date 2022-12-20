@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
 html,
 body,
 #root,
-.app{
+.app {
   height: 100%;
   width: 100%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-

@@ -1,6 +1,8 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
+
+/* REGISTER USER IN DATABASE */
 export const register = async (req, res) => {
   try {
     const {
@@ -21,7 +23,7 @@ export const register = async (req, res) => {
       firstName,
       lastName,
       email,
-      password: passwordHash,//hash para criptografar nosso sistema
+      password: passwordHash,
       picturePath,
       friends,
       location,
@@ -36,15 +38,15 @@ export const register = async (req, res) => {
   }
 };
 
-
+/* LOGGING IN */
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email: email });
-    if (!user) return res.status(400).json({ msg: "Usu does not exist " });
+    if (!user) return res.status(400).json({ msg: "User does not exist. " });
 
     const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ msg: "Invalid credential " });
+    if (!isMatch) return res.status(400).json({ msg: "Invalid credentials. " });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     delete user.password;
