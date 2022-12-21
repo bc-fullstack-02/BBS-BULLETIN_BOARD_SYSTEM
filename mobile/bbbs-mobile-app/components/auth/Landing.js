@@ -4,7 +4,7 @@ import { View, StyleSheet,Button } from 'react-native'
 export default function Landing(navigation) {
   return (
     <View style={estilos.container}>
-        <Button  style={estilos.botao}      title="Login" onPress={() => navigation.navigate('Login')}/>
+        <Button  style={estilos.botao} title="Login" onPress={() => navigation.navigate('Login')}/>
         <Button title="Register" onPress={() => navigation.navigate('Register')}/>
     </View>
   )
