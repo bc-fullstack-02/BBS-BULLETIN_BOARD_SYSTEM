@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "bbs-mobile-app",
-    "slug": "bbs-mobile-app",
+    "name": "bbbs-mobile-app",
+    "slug": "bbbs-mobile-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
