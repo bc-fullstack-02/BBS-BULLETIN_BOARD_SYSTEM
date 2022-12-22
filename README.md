@@ -23,6 +23,23 @@ Dentro da pasta AUTH temos a autenticação de nossa rota,que recebe os respecti
 Dentro da pasta POSTS temos os controles dos nossos posts do sistema, ler todos fazer alterações(UPDATE).
 Dentro da pasta USERS temos  os nossos usuários,basicamente com as mesmas especificações  DA PASTA POSTS.
 
+## BACKEND
+```bash
+  npm install express
+
+```
+## Deploy
+
+Para fazer o deploy desse projeto rode no backend
+```bash
+use data for add fake useres in the data base
+Insert.many.Users/POSTS
+```
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+`NPM RUN DEV`
+
 ## Referência
 
  - [MULTER](https://www.npmjs.com/package/multer)
@@ -67,13 +84,7 @@ Na theme está o tema da nossa aplicação.
 
 ## Deploy
 
-Para fazer o deploy desse projeto rode
-
-## BACKEND
-```bash
-  npm install express
-
-```
+Para fazer o deploy desse projeto rode no front-end
 
 ## FRONTEND
 ```bash
@@ -85,9 +96,30 @@ Para fazer o deploy desse projeto rode
 
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
 
-`NPM RUN DEV`
-
 `NPM START`
+
+
+
+## MOBILE(BBS)
+
+EM CONSTRUCAOO
+
+
+## Deploy
+
+Para fazer o deploy desse projeto rode no mobile
+
+## MOBILE
+```bash
+  npm install from node Modules
+
+```
+
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+
+`NPX EXPO START`
 
 
 ## Funcionalidades
@@ -103,8 +135,9 @@ Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de
 Instale my-project com npm
 
 ```bash
+  
+  cd BBS AND ANOTHER PAGES
   npm install my-project
-  cd my-project
 ```
     
     
