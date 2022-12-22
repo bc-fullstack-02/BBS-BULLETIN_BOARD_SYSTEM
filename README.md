@@ -64,6 +64,50 @@ Na theme está o tema da nossa aplicação.
   - [PDFS ](https://drive.google.com/drive/folders/1g0FYNhOlK7bvZNO6o1Ko4XcuZMg9uLM7)
   
 
+
+## Deploy
+
+Para fazer o deploy desse projeto rode
+
+## BACKEND
+```bash
+  npm install express
+
+```
+
+## FRONTEND
+```bash
+  npm install from node Modules
+
+```
+
+## Variáveis de Ambiente
+
+Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+
+`NPM RUN DEV`
+
+`NPM START`
+
+
+## Funcionalidades
+
+- Temas dark e light
+- Preview em tempo real
+- Modo tela cheia
+- Multiplataforma
+
+
+## Instalação
+
+Instale my-project com npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+    
 ## Stack utilizada
 
 **Front-end:** REACT(REDUX),CSSBASILENE,JAVASCRIPT
