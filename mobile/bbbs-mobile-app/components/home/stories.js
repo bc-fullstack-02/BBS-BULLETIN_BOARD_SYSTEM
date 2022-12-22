@@ -3,15 +3,18 @@ import React from 'react'
 import  USERS  from '../../data/users'
 const stories = () => {
   return (
-    <View style={{marginBottom:13}}>
-    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        
+<View style={{marginBottom:13}}>
+    <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
         {USERS.map((story, index) => (
-            <Image key={index} source={story.image} style={styels.story}/>
-        ))}
-        
+            <View key={index}>
+            <Image source={story.image} style={styels.story}/>
+            <Text style={story.uss}>{story.user.length >
+            10 ? story.user.substring(0, 10) + '..' : story.user
+            }</Text>
+            </View>
+        ))} 
   </ScrollView>
-    </View>
+</View>
   )
 }
 const styels = StyleSheet.create({
@@ -20,8 +23,16 @@ const styels = StyleSheet.create({
         height: 50,
         borderRadius: 50,
         borderWidth: 3,
-        borderColor: '#FF0000',
+        borderColor: '#89dbed',
         marginHorizontal: 10,
+    },
+    uss: {
+        color: '#fff',
+        fontSize: 10,
+        textAlign: 'center',
+        marginTop: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 })
 export default stories
