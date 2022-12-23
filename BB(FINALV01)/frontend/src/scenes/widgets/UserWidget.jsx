@@ -120,11 +120,16 @@ const UserWidget = ({ userId, picturePath }) => {
 
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
-            <img src="../assets/twitter.png" alt="twitter" />
+            <a href="https://www.facebook.com/benevanio.santos.7/">
+              <img src="../img/facebook.png" alt="facebook" height={50} />
+            </a>
             <Box>
               <Typography color={main} fontWeight="500">
-                Twitter
+                Facebook
+              
+                
               </Typography>
+              
               <Typography color={medium}>Social Network</Typography>
             </Box>
           </FlexBetween>

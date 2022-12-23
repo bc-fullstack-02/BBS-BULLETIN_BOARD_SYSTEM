@@ -13,7 +13,7 @@ const LoginPage = () => {
         textAlign="center"
       >
         <Typography fontWeight="bold" fontSize="32px" color="primary">
-         BBSocial
+          <img src="../img/logo.png" alt="logo" height={50}/>
         </Typography>
       </Box>
 
