@@ -8,9 +8,9 @@ const HomeScreen = () => {
     <View>
         <Header />
         <Stories />
-        <ScrollView>
-            <Post />
-        </ScrollView>
+      <ScrollView>
+          <Post />
+      </ScrollView>
       
     </View>
   )

@@ -3,6 +3,7 @@ import USERS from './users';
 const POSTS = [{
         image: require('./../assets/images/post4.jpeg'),
         user: USERS[0].user,
+        Location: "Sao Paulo",
         likes: 800,
         caption: "Aqui esta a descricao do post",
         profile_picture: USERS[0].image,

@@ -6,14 +6,17 @@ const Post = ({post}) => {
     return (
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <View>
-                <Divider />
+               
                 {POSTS.map((post, index) => (
                     <View key={index}>
+                         
                         {postHeader(post)}
+                        
                         <Image source={post.image} style={styles.postImage}/>
+                    < Divider  color="pink"/>
                         
                         <View >
-                
+                                          
                             <Text style={styles.likes}>{post.likes} likes</Text>
                             <Text style={styles.caption}>{post.caption}</Text>
                             <Text style={styles.postDate}>1 day ago</Text>
@@ -91,6 +94,15 @@ const styles = StyleSheet.create({
     imagePost: {
         width: '100%',
         height: 400,
+        resizeMode: 'cover',
+    },
+    location: {
+        color: '#fff',
+        fontSize: 10,
+        textAlign: 'center',
+        marginTop: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
         resizeMode: 'cover',
     },
 })
