@@ -133,15 +133,39 @@ const UserWidget = ({ userId, picturePath }) => {
               <Typography color={medium}>Social Network</Typography>
             </Box>
           </FlexBetween>
+          <FlexBetween gap="1rem">
+            <a href="https://www.instagram.com/bene_tesla/">
+              <img src="../img/instagram.png" alt="Instagram" height={50} />
+            </a>
+            <Box>
+              <Typography color={main} fontWeight="500">
+                Instagram
+              </Typography>
+              <Typography color={medium}>Social Network</Typography>
+            </Box>
+          </FlexBetween>
           <EditOutlined sx={{ color: main }} />
         </FlexBetween>
 
         <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
-            <img src="../assets/linkedin.png" alt="linkedin" />
+            <a href="https://www.linkedin.com/in/bene-tesla/">
+              <img src="../img/linkedin.png" alt="Linkedin" height={50} />
+            </a>
             <Box>
               <Typography color={main} fontWeight="500">
                 Linkedin
+              </Typography>
+              <Typography color={medium}>Network Platform</Typography>
+            </Box>
+          </FlexBetween>
+          <FlexBetween gap="1rem">
+            <a href="https://github.com/benetesla">
+              <img src="../img/github.png" alt="github" height={50} />
+            </a>
+            <Box>
+              <Typography color={main} fontWeight="500">
+                Github
               </Typography>
               <Typography color={medium}>Network Platform</Typography>
             </Box>
