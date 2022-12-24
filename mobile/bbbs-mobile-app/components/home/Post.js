@@ -1,16 +1,34 @@
 import React from "react";
 import { View, Text,Image,StyleSheet, ScrollView}from "react-native";
-import { Divider } from "@react-native-material/core";
+
 import  POSTS from "../../data/posts";
-const Post = ({post}) => {
+
+const postIcon = [{
+    name : "Like",
+    ImgUrl: "https://img.icons8.com/ios/50/000000/like--v1.png"
+},
+{
+    name : "Comment",
+    ImgUrl: "https://img.icons8.com/ios/50/000000/comments.png"
+},
+{
+    name : "Share",
+    ImgUrl: "https://img.icons8.com/ios/50/000000/share.png"
+},
+{
+    name : "Save",
+    ImgUrl: "https://img.icons8.com/ios/50/000000/bookmark-ribbon.png"
+},
+]
+
+const Post = (post) => {
     return (
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
             <View>
                
                 {POSTS.map((post, index) => (
                     <View key={index}>
-                         < Divider color = "blue" />
-                          
+                                             
                         {postHeader(post)}
                        
                         <Image source={post.image} style={styles.postImage}/>  
@@ -20,11 +38,8 @@ const Post = ({post}) => {
                         </View> 
                                    
                         <View >
-                            <Text style={styles.likes}>{post.likes} likes</Text>
-                            <Text style={styles.caption}>{post.caption}</Text>
-                            <Text style={styles.postDate}>{post.postDate}</Text>
+                            <Icon/>
                         </View>
-                       
                         {post.comments.map((comment, index) => (
                             <View key={index}>
                                 <Text style={styles.comment}>
@@ -50,12 +65,28 @@ const postHeader = (post) => {
         <View style={styles.postHeader}>
             <Image source={post.profile_picture} style={styles.profilePicture}/>
             <Text style={styles.username}>{post.user}</Text>
-
         </View>
     )
 }
 
+const footer = (post) => {
+    return (
+    <View style={styles.footer}>
+    </View>
+    )
+}
 
+const Icon = () => {
+    return (
+        <View style={styles.icon}>
+            {postIcon.map((icon, index) => (
+                <View key={index}>
+                    <Image source={{uri: icon.ImgUrl}} style={styles.iconImg}/>
+                </View>
+            ))}
+        </View>
+    )
+}
 
 const styles = StyleSheet.create({
     postHeader: {
@@ -112,17 +143,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         resizeMode: 'cover',
     },
-    dotLeft: {
-        color: '#fff',
-        fontSize: 38,
-        textAlign: 'center',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        resizeMode: 'cover',
-        marginTop: 10,
-        marginLeft: 10,
-    },
+icon: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+    marginHorizontal: 10,
+},
+iconImg: {
+    width: 25,
+    height: 25,
+    resizeMode: 'cover',
+},
 })
 
 export default Post;
