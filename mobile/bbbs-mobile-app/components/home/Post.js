@@ -9,18 +9,22 @@ const Post = ({post}) => {
                
                 {POSTS.map((post, index) => (
                     <View key={index}>
-                         
+                         < Divider color = "blue" />
+                          
                         {postHeader(post)}
-                        
-                        <Image source={post.image} style={styles.postImage}/>
-                    < Divider  color="pink"/>
-                        
+                       
+                        <Image source={post.image} style={styles.postImage}/>  
+
+                        <View>
+                            <Text style={styles.dotLeft}>...</Text>
+                        </View> 
+                                   
                         <View >
-                                          
                             <Text style={styles.likes}>{post.likes} likes</Text>
                             <Text style={styles.caption}>{post.caption}</Text>
-                            <Text style={styles.postDate}>1 day ago</Text>
+                            <Text style={styles.postDate}>{post.postDate}</Text>
                         </View>
+                       
                         {post.comments.map((comment, index) => (
                             <View key={index}>
                                 <Text style={styles.comment}>
@@ -28,9 +32,11 @@ const Post = ({post}) => {
                                     {comment.comment}
                                 </Text>
                             </View>
+                        
                         ))}
-                        <Divider />
-                    </View>                   
+                    </View> 
+                
+                                      
 
                 ))}
                 
@@ -44,6 +50,7 @@ const postHeader = (post) => {
         <View style={styles.postHeader}>
             <Image source={post.profile_picture} style={styles.profilePicture}/>
             <Text style={styles.username}>{post.user}</Text>
+
         </View>
     )
 }
@@ -104,6 +111,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         resizeMode: 'cover',
+    },
+    dotLeft: {
+        color: '#fff',
+        fontSize: 38,
+        textAlign: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        resizeMode: 'cover',
+        marginTop: 10,
+        marginLeft: 10,
     },
 })
 
