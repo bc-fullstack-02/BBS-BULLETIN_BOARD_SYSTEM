@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text,Image,StyleSheet, ScrollView, TouchableOpacity}from "react-native";
 
+
+
 import  POSTS from "../../data/posts";
  
 
@@ -28,6 +30,7 @@ const Post = (post) => {
             <View>     
                 {POSTS.map((post, index) => (
                     <View key={index}>
+                        
                         {postHeader(post)}
                         <Image source={post.image} style={styles.postImage}/> 
 
@@ -42,13 +45,12 @@ const Post = (post) => {
                        </View>
                         </View>
                         {caption(post)}
-                        {post.comments.map((comment, index) => (
+                        {post.comments.map((comment, _index) => (
                             <View >
                                 <Text style={styles.comment}>
                                     <Text style={styles.commentUser}>{comment.user}</Text>
-                                    {comment.comment}
+                                    
                                 </Text>
-                                
                             </View>
                         
                         ))}
@@ -62,6 +64,7 @@ const postHeader = (post) => {
     return (
         <View style={styles.postHeader}>
             <Image source={post.profile_picture} style={styles.profilePicture}/>
+            {/*exibir o ultimo post */}
             <Text style={styles.username}>{post.user}</Text>
              {location(post)}
         </View>
@@ -121,6 +124,10 @@ profilePicture: {
         borderWidth: 1,
         borderColor: '#89dbed',
         marginHorizontal: 10,
+    },
+    username:{
+        fontWeight: 'bold',
+        fontFamily: 'sans-serif',
     },
 likes: {
         fontWeight: 'bold',

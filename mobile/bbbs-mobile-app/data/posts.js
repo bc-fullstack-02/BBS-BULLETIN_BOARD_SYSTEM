@@ -72,23 +72,6 @@ const POSTS = [{
             },
         ],
     },
-    {
-        image: require('./../assets/images/post8.jpeg'),
-        user: USERS[5].user,
-        likes: 800,
-        Location: "Florianopolis",
-         postDate: "JusNow",
-        caption: "Aqui esta a descricao do post",
-        profile_picture: USERS[5].image,
-        comments: [{
-                user: "BeneTesla",
-                comment: "Isso e um comentarios",
-            },
-            {
-                user: "pedro",
-                comment: "YO.",
-            },
-        ],
-    }
+
 ]
 export default POSTS;
