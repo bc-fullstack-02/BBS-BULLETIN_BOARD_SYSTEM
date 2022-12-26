@@ -17,7 +17,6 @@ const POSTS = [{
                 comment: "YO.",
             },
         ],
-
     },
     {
         image: require('./../assets/images/post5.jpeg'),
@@ -35,7 +34,6 @@ const POSTS = [{
                 comment: "YO.",
             },
         ],
-
     },
     {
         image: require('./../assets/images/post6.jpeg'),
@@ -53,7 +51,6 @@ const POSTS = [{
                 comment: "YO.",
             },
         ],
-
     },
     {
         image: require('./../assets/images/post7.jpeg'),
@@ -71,7 +68,6 @@ const POSTS = [{
                 comment: "YO.",
             },
         ],
-
     },
     {
         image: require('./../assets/images/post8.jpeg'),
@@ -90,6 +86,5 @@ const POSTS = [{
             },
         ],
     }
-    
 ]
 export default POSTS;

@@ -24,25 +24,20 @@ const postIcon = [{
 const Post = (post) => {
     return (
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-            <View>
-               
+            <View>     
                 {POSTS.map((post, index) => (
-                    <View key={index}>
-                                             
+                    <View key={index}>               
                         {postHeader(post)}
-                       
                         <Image source={post.image} style={styles.postImage}/>  
-
                         <View>
                             <Text style={styles.dotLeft}>...</Text>
                         </View> 
-                           
                         <View >
                             <Icon/>
-                             <View>
+                        <View>
                             <Text style={styles.data}>{post.postDate}</Text>
                             <Text style={styles.likes}>{post.likes} likes</Text>
-                            </View>
+                        </View>
                         </View>
                         {post.comments.map((comment, index) => (
                             <View key={index}>
@@ -53,13 +48,10 @@ const Post = (post) => {
                             </View>
                         ))}
                     </View>          
-                ))}
-                
+                ))}               
             </View>
-        </ScrollView>
-
-    )
-}
+        </ScrollView> 
+)};
 const postHeader = (post) => {
     return (
         <View style={styles.postHeader}>
@@ -68,14 +60,6 @@ const postHeader = (post) => {
         </View>
     )
 }
-
-const footer = (post) => {
-    return (
-    <View style={styles.footer}>
-    </View>
-    )
-}
-
 const Icon = () => {
     return (
         <View style={styles.icon}>
@@ -87,22 +71,22 @@ const Icon = () => {
                </TouchableOpacity>
             ))}
         </View>
-    )
-}
+)}
+
 const like = (post) => {
     return (
         <View style={styles.like}>
-            <Text style={styles.likes}>{post.likes} likes</Text>
+            <Text style={styles.likes}>{post.likes}</Text>
         </View>
     )
 }
 const styles = StyleSheet.create({
-    postHeader: {
+postHeader: {
         flexDirection: 'row',
         alignItems: 'center',
         padding: 10,
     },
-    profilePicture: {
+profilePicture: {
         width: 40,
         height: 40,
         borderRadius: 40,
@@ -114,35 +98,35 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 10,
     },
-    caption: {
+caption: {
         marginLeft: 10,
         marginRight: 10,
     },
-    postDate: {
+postDate: {
         color: '#c1c1c1',
         marginLeft: 10,
         marginTop: 5,
     },
-    comment: {
+comment: {
         flexDirection: 'row',
         marginLeft: 10,
         marginTop: 5,
     },
-    commentUser: {
+commentUser: {
         fontWeight: 'bold',
         marginRight: 5,
     },
-    postImage: {
+postImage: {
         width: 400,
         height: 250,
         resizeMode: 'cover',
     },
-    imagePost: {
+imagePost: {
         width: '100%',
         height: 400,
         resizeMode: 'cover',
     },
-    location: {
+location: {
         color: '#fff',
         fontSize: 10,
         textAlign: 'center',
@@ -190,7 +174,5 @@ data: {
     marginTop: 5,
     fontSize: 15,
 },
-
 })
-
 export default Post;
