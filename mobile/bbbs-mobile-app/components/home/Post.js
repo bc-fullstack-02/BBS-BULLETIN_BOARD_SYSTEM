@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text,Image,StyleSheet, ScrollView, TouchableOpacity}from "react-native";
 
 import  POSTS from "../../data/posts";
+ 
 
 const postIcon = [{
     name : "Like",
@@ -12,13 +13,14 @@ const postIcon = [{
     ImgUrl: "https://img.icons8.com/ios/50/000000/comments.png"
 },
 {
+    name: "Save",
+    ImgUrl: "https://img.icons8.com/ios/50/000000/bookmark-ribbon.png"
+},
+{
     name : "Share",
     ImgUrl: "https://img.icons8.com/ios/50/000000/share.png"
 },
-{
-    name : "Save",
-    ImgUrl: "https://img.icons8.com/ios/50/000000/bookmark-ribbon.png"
-},
+
 ]
 const Post = (post) => {
     return (
@@ -27,9 +29,8 @@ const Post = (post) => {
                 {POSTS.map((post, index) => (
                     <View key={index}>
                         {postHeader(post)}
-                         {location(post)}
                         <Image source={post.image} style={styles.postImage}/> 
-                         
+
                         <View>
                             
                             <Text style={styles.dotLeft}>...</Text>
@@ -37,9 +38,8 @@ const Post = (post) => {
                         <View >
                             <Icon/>
                         <View>
-                            <Text style={styles.data}>{post.postDate}</Text>
-                            <Text style={styles.likes}>{post.likes} Likes</Text>
-                        </View>
+                              <Text style={styles.likes}>{post.likes} Likes</Text>
+                       </View>
                         </View>
                         {caption(post)}
                         {post.comments.map((comment, index) => (
@@ -48,8 +48,11 @@ const Post = (post) => {
                                     <Text style={styles.commentUser}>{comment.user}</Text>
                                     {comment.comment}
                                 </Text>
+                                
                             </View>
+                        
                         ))}
+                         <Text style={styles.data}>{post.postDate}</Text>
                     </View>    
                     ))}               
             </View>
@@ -60,16 +63,18 @@ const postHeader = (post) => {
         <View style={styles.postHeader}>
             <Image source={post.profile_picture} style={styles.profilePicture}/>
             <Text style={styles.username}>{post.user}</Text>
+             {location(post)}
         </View>
     )
 }
 const Icon = () => {
     return (
         <View style={styles.icon}>
-            {postIcon.map((icon, index) => (
+            {postIcon.map((icon, _index) => (
                <TouchableOpacity>
                  <View>
                     <Image source={{uri: icon.ImgUrl}} style={styles.iconImg}/>
+        
                 </View>
                </TouchableOpacity>
             ))}
@@ -87,9 +92,12 @@ const caption = (post) => {
         <View style={styles.caption}>
             <Text style={styles.username}>{post.user}</Text>
             <Text>{post.caption}</Text>
+           
         </View>
     )
 }
+{/*shared with web share*/}
+
 {
     /*const like = (post) => {
         return (
@@ -104,6 +112,7 @@ postHeader: {
         flexDirection: 'row',
         alignItems: 'center',
         padding: 10,
+        marginHorizontal: -14,
     },
 profilePicture: {
         width: 40,
@@ -154,7 +163,7 @@ icon: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 5,
+    padding: 18,
     marginHorizontal: 15,
 },
 iconImg: {
@@ -190,17 +199,14 @@ data: {
     fontSize: 15,
 },
 location: {
-    color: '#c1c1c1',
-    fontSize:15,
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
     alignItems: 'center',
-    padding: 2,
-    marginHorizontal: 15,
-    justifyContent: 'center',
-    resizeMode: 'cover',
-    lineHeight: 14,
-    flexGrow: 1,
+    marginTop: 14,
+    fontSize: 11,
+    marginLeft: -17,
+
 },
 })
 export default Post;
