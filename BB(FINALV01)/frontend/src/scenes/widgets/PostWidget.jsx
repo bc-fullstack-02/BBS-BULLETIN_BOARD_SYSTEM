@@ -29,6 +29,18 @@ const PostWidget = ({
   const loggedInUserId = useSelector((state) => state.user._id);
   const isLiked = Boolean(likes[loggedInUserId]);
   const likeCount = Object.keys(likes).length;
+  const share = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: "Web Share API",
+        text: "Check out Web Share API!",
+        url: "https://web.dev/web-share/",
+      });
+    } else {
+      alert("Your browser doesn't support Web Share API");
+    }
+  };
+  
 
   const { palette } = useTheme();
   const main = palette.neutral.main;
@@ -79,6 +91,11 @@ const PostWidget = ({
             </IconButton>
             <Typography>{likeCount}</Typography>
           </FlexBetween>
+          <FlexBetween gap="0.3rem">
+            <IconButton onClick={{share}}>
+              <ShareOutlined />
+            </IconButton>
+            </FlexBetween>
 
           <FlexBetween gap="0.3rem">
             <IconButton onClick={() => setIsComments(!isComments)}>

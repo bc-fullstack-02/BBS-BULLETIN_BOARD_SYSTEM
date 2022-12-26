@@ -43,7 +43,7 @@ const Post = (post) => {
                         </View>
                         {caption(post)}
                         {post.comments.map((comment, index) => (
-                            <View key={index}>
+                            <View >
                                 <Text style={styles.comment}>
                                     <Text style={styles.commentUser}>{comment.user}</Text>
                                     {comment.comment}
@@ -68,7 +68,7 @@ const Icon = () => {
         <View style={styles.icon}>
             {postIcon.map((icon, index) => (
                <TouchableOpacity>
-                 <View key={index}>
+                 <View>
                     <Image source={{uri: icon.ImgUrl}} style={styles.iconImg}/>
                 </View>
                </TouchableOpacity>
