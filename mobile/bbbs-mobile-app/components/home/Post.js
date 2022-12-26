@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text,Image,StyleSheet, ScrollView}from "react-native";
+import { View, Text,Image,StyleSheet, ScrollView, TouchableOpacity}from "react-native";
 
 import  POSTS from "../../data/posts";
 
@@ -36,9 +36,13 @@ const Post = (post) => {
                         <View>
                             <Text style={styles.dotLeft}>...</Text>
                         </View> 
-                                   
+                           
                         <View >
                             <Icon/>
+                             <View>
+                            <Text style={styles.data}>{post.postDate}</Text>
+                            <Text style={styles.likes}>{post.likes} likes</Text>
+                            </View>
                         </View>
                         {post.comments.map((comment, index) => (
                             <View key={index}>
@@ -47,12 +51,8 @@ const Post = (post) => {
                                     {comment.comment}
                                 </Text>
                             </View>
-                        
                         ))}
-                    </View> 
-                
-                                      
-
+                    </View>          
                 ))}
                 
             </View>
@@ -80,14 +80,22 @@ const Icon = () => {
     return (
         <View style={styles.icon}>
             {postIcon.map((icon, index) => (
-                <View key={index}>
+               <TouchableOpacity>
+                 <View key={index}>
                     <Image source={{uri: icon.ImgUrl}} style={styles.iconImg}/>
                 </View>
+               </TouchableOpacity>
             ))}
         </View>
     )
 }
-
+const like = (post) => {
+    return (
+        <View style={styles.like}>
+            <Text style={styles.likes}>{post.likes} likes</Text>
+        </View>
+    )
+}
 const styles = StyleSheet.create({
     postHeader: {
         flexDirection: 'row',
@@ -147,14 +155,42 @@ icon: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 10,
-    marginHorizontal: 10,
+    padding: 5,
+    marginHorizontal: 15,
 },
 iconImg: {
-    width: 25,
-    height: 25,
-    resizeMode: 'cover',
+    width: 20,
+    height: 20,
+    margin: 5,
 },
+dotLeft: {
+    fontSize: 40,
+    color: '#c1c1c1',
+    marginLeft: 180,
+    marginTop: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'cover',
+    lineHeight: 18,
+},
+like: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 5,
+    marginHorizontal: 15,
+},
+likes: {
+    fontWeight: 'bold',
+    marginLeft: 10,
+    fontSize: 16,
+},
+data: {
+    color: '#c1c1c1',
+    marginLeft: 10,
+    marginTop: 5,
+    fontSize: 15,
+},
+
 })
 
 export default Post;
