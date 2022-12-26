@@ -4,13 +4,14 @@ import {
   FavoriteOutlined,
   ShareOutlined,
 } from "@mui/icons-material";
-import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Divider, IconButton,Button, Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import Friend from "components/Friend";
 import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
+
 
 const PostWidget = ({
   postId,
@@ -32,6 +33,7 @@ const PostWidget = ({
   const share = () => {
     if (navigator.share) {
       navigator.share({
+        type: "text/plain",
         title: "Web Share API",
         text: "Check out Web Share API!",
         url: "https://web.dev/web-share/",
@@ -40,7 +42,7 @@ const PostWidget = ({
       alert("Your browser doesn't support Web Share API");
     }
   };
-  
+
 
   const { palette } = useTheme();
   const main = palette.neutral.main;
@@ -91,11 +93,7 @@ const PostWidget = ({
             </IconButton>
             <Typography>{likeCount}</Typography>
           </FlexBetween>
-          <FlexBetween gap="0.3rem">
-            <IconButton onClick={{share}}>
-              <ShareOutlined />
-            </IconButton>
-            </FlexBetween>
+         
 
           <FlexBetween gap="0.3rem">
             <IconButton onClick={() => setIsComments(!isComments)}>
@@ -105,9 +103,9 @@ const PostWidget = ({
           </FlexBetween>
         </FlexBetween>
 
-        <IconButton>
-          <ShareOutlined />
-        </IconButton>
+        <FlexBetween gap="0.3rem">
+            <ShareOutlined onClick={share} />
+            </FlexBetween>
       </FlexBetween>
       {isComments && (
         <Box mt="0.5rem">
