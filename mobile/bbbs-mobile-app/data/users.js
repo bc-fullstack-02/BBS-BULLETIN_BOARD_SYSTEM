@@ -7,19 +7,7 @@ const USERS = [{
     }, {
         user: "ANA",
         image: require('./../assets/images/p12.jpeg'),
-    }, {
-        user: "Ricardo",
-        image: require('./../assets/images/p7.jpeg'),
-
-    }, 
-    {
-        user: "Paulo",
-        image: require('./../assets/images/p3.jpeg'),
-    },
-    {
-        user: "Bene",
-        image: require('./../assets/images/p4.jpeg'),
-    },
+    }
 
 ]
 export default USERS;
