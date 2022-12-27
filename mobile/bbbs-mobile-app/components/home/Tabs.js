@@ -1,4 +1,4 @@
-import { View,StyleSheet,Image, TouchableOpacity} from 'react-native'
+import { View,StyleSheet,Image, TouchableOpacity,Text} from 'react-native'
 import React from 'react'
 import { useState } from 'react'
 const IconFooter = [{
@@ -24,27 +24,55 @@ const Tabs = () => {
         setActive(tab)
     }
     return (
+        <View style={styles.wrapper}>
         <View style={styles.container}>
             {IconFooter.map((tab, index) => (
                 <TouchableOpacity key={index} onPress={() => changeTab(tab.name)}>
                     <Image source={{uri: tab.ImgUrl}} style={[styles.icon, {tintColor: tab.name === active ? "#2e64e5" : "#748c94"}]}/>
+                    {/**ir para o perfil */}
+                    {tab.name === "profile" && <View style={{position: "absolute", top: 0, right: 0, backgroundColor: "#2e64e5", width: 15, height: 15, borderRadius: 15, justifyContent: "center", alignItems: "center"}}>
+                        <Text style={{color: "#fff", fontSize: 10}}>1</Text>
+                    </View>}
                 </TouchableOpacity>
             ))}
         </View>
+        </View>
     )
 }
+const changeTab = (tab) => {
+    if (tab === "profile") {
+        navigation.navigate("Profile")
+    }else{
+        navigation.navigate("Home")
+    }
+}
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        paddingVertical: 10,
+    wrapper: {
+        position: "relative",
+        bottom: 0,
+        left: 0,
+        right: 0,
         backgroundColor: "#fff",
         borderTopWidth: 1,
-        borderTopColor: "#e8e8e8"
+        borderTopColor: "#eee",
+        elevation: 8,
+        shadowColor: "#000",
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.5,
+        shadowRadius: 2
+    },
+    container: {
+        flexDirection: "row",
+        justifyContent: "space-around",
+        height: 50,
+        paddingTop: 10,
+
     },
     icon: {
-        height: 30,
-        width: 30
+        height: 25,
+        width: 25,
+        color: "#748c94"      
+
     }
 })
 

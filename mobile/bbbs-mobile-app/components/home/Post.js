@@ -49,8 +49,9 @@ const Post = (post) => {
                             <View >
                                 <Text style={styles.comment}>
                                     <Text style={styles.commentUser}>{comment.user}</Text>
-                                    
+                                    {comment.comment}
                                 </Text>
+                                
                             </View>
                         
                         ))}
@@ -124,10 +125,6 @@ profilePicture: {
         borderWidth: 1,
         borderColor: '#89dbed',
         marginHorizontal: 10,
-    },
-    username:{
-        fontWeight: 'bold',
-        fontFamily: 'sans-serif',
     },
 likes: {
         fontWeight: 'bold',

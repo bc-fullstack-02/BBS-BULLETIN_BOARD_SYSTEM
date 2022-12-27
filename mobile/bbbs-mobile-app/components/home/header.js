@@ -12,6 +12,7 @@ const header = () => {
     <View style={estilos.iconScreeen}>
         <TouchableOpacity>
             <Image style={estilos.icon} source={require('../../assets/images/dark.png')} />
+            
         </TouchableOpacity>
         
         <TouchableOpacity>
