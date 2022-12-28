@@ -48,18 +48,13 @@ const changeTab = (tab) => {
 }
 const styles = StyleSheet.create({
     wrapper: {
-        position: "relative",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: "#fff",
-        borderTopWidth: 1,
-        borderTopColor: "#eee",
-        elevation: 8,
-        shadowColor: "#000",
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.5,
-        shadowRadius: 2
+      position: 'absolute',
+        marginTop: 760,
+        width: "100%",
+        height: 50,
+        backgroundColor: "#1e272e",
+        
+        
     },
     container: {
         flexDirection: "row",

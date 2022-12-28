@@ -1,37 +1,30 @@
-import {  ScrollView,SafeAreaView, StyleSheet} from 'react-native'
+import {  ScrollView,SafeAreaView} from 'react-native'
 import React from 'react'
 import Header from '../components/home/header'
 import Stories from '../components/home/stories'
 import Post from '../components/home/Post'
-import Tabs from '../components/home/Tabs'
 import POSTS from '../data/posts'
+import Tabs from '../components/home/Tabs'
 const HomeScreen = () => {
   return (
     
-    <SafeAreaView style={StyleSheet.container}>
-      
+    <SafeAreaView>
       <Header />
-      < Tabs  />
-    
-     
+      <Stories />
+      
       <ScrollView>
-        <Post />         
-      </ScrollView>
-        {/*< Stories /> */}
         
+      {POSTS.map((post, index) => (
+      <Post post={post} key={index}/>
+      ))}  
+      
+      </ScrollView>
+   {/* < Tabs /> */}
+   
+  < Tabs />
    </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
 
 
 export default HomeScreen

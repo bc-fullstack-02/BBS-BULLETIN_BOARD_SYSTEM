@@ -4,14 +4,13 @@ import {
   FavoriteOutlined,
   ShareOutlined,
 } from "@mui/icons-material";
-import { Box, Divider, IconButton,Button, Typography, useTheme } from "@mui/material";
+import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import Friend from "components/Friend";
 import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
-
 
 const PostWidget = ({
   postId,
@@ -24,7 +23,7 @@ const PostWidget = ({
   likes,
   comments,
 }) => {
-  const [isComments, setIsComments] = useState(false);
+  const [isComments] = useState(false);
   const dispatch = useDispatch();
   const token = useSelector((state) => state.token);
   const loggedInUserId = useSelector((state) => state.user._id);
@@ -33,16 +32,14 @@ const PostWidget = ({
   const share = () => {
     if (navigator.share) {
       navigator.share({
-        type: "text/plain",
-        title: "Web Share API",
-        text: "Check out Web Share API!",
-        url: "https://web.dev/web-share/",
+        title: "Posts",
+        text: "Check out this post",
+        url: `http://localhost:3000/posts/${postId}`,
       });
     } else {
       alert("Your browser doesn't support Web Share API");
     }
   };
-
 
   const { palette } = useTheme();
   const main = palette.neutral.main;
@@ -57,6 +54,21 @@ const PostWidget = ({
       },
       body: JSON.stringify({ userId: loggedInUserId }),
     });
+    const updatedPost = await response.json();
+    dispatch(setPost({ post: updatedPost }));
+  };
+  const commentsHandler = async () => {
+    const response = await fetch(
+      `http://localhost:3001/posts/${postId}/comment`,
+      {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: loggedInUserId }),
+      }
+    );
     const updatedPost = await response.json();
     dispatch(setPost({ post: updatedPost }));
   };
@@ -93,30 +105,28 @@ const PostWidget = ({
             </IconButton>
             <Typography>{likeCount}</Typography>
           </FlexBetween>
-         
 
           <FlexBetween gap="0.3rem">
-            <IconButton onClick={() => setIsComments(!isComments)}>
+            <IconButton onClick={commentsHandler}>
               <ChatBubbleOutlineOutlined />
             </IconButton>
-            <Typography>{comments.length}</Typography>
           </FlexBetween>
         </FlexBetween>
 
         <FlexBetween gap="0.3rem">
-            <ShareOutlined onClick={share} />
-            </FlexBetween>
+          <ShareOutlined onClick={share} />
+        </FlexBetween>
       </FlexBetween>
       {isComments && (
-        <Box mt="0.5rem">
-          {comments.map((comment, i) => (
-            <Box key={`${name}-${i}`}>
-              <Divider />
-              <Typography sx={{ color: main, m: "0.5rem 0", pl: "1rem" }}>
-                {comment}
-              </Typography>
-            </Box>
-          ))}
+        <Box sx={{ mt: "1rem" }}>
+          {/**add coments here */}
+
+          <FlexBetween gap="0.3rem">
+            <IconButton onClick={commentsHandler}>
+              <ChatBubbleOutlineOutlined />
+            </IconButton>
+          </FlexBetween>
+
           <Divider />
         </Box>
       )}

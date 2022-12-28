@@ -35,7 +35,7 @@ const estilos = StyleSheet.create({
     logo: {
         width: 150,
         height: 50,
-       resizeMode: 'contain',
+        resizeMode: 'contain',
         marginTop: 26,
         borderRadius: 10,
     },
@@ -53,9 +53,9 @@ const estilos = StyleSheet.create({
         padding: 10,
         marginTop: 26,
         width: 15,
-        height: 25,
+        height: 15,
         marginLeft: 10,
-        resizeMode: 'contain',      
+             
     },
     unread:{
         backgroundColor: '#FF0000',
@@ -67,7 +67,7 @@ const estilos = StyleSheet.create({
         height: 14,
         borderRadius: 10,
         justifyContent: 'center',
-        zIndex: 200,
+        zIndex: 400,
     },
     unreadText:{
         color: '#fff',
