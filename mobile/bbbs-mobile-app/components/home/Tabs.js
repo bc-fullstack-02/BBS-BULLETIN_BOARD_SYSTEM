@@ -26,7 +26,7 @@ const Tabs = ({icons}) => {
     const [active, setActive] = useState("Home")
     const Icon = ({icon}) => (
         <TouchableOpacity onPress={() => setActive(icon.name)}>
-            <Image source={icon.name === active ? {uri: icon.Active} : {uri: icon.Inactive}} style={{           width: 30,height: 30,tintColor: icon.name === active ? "#e84118" : "#ffffff",
+            <Image source={icon.name === active ? {uri: icon.Active} : {uri: icon.Inactive}} style={{      width: 30,height: 30,tintColor: icon.name === active ? "#e84118" : "#ffffff",
             }}/>
         </TouchableOpacity>
     )
