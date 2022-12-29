@@ -45,6 +45,10 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#fff',
         marginHorizontal: 20,
+        
+        borderRadius: 10,
+        padding: 10,
+        
     },
     iconScreeen:{
         flexDirection: 'row',
@@ -55,7 +59,7 @@ const estilos = StyleSheet.create({
         width: 15,
         height: 15,
         marginLeft: 10,
-             
+        
     },
     unread:{
         backgroundColor: '#FF0000',
@@ -71,8 +75,8 @@ const estilos = StyleSheet.create({
     },
     unreadText:{
         color: '#fff',
-        fontWeight: '600',
-        fontSize: 10,
+        fontWeight: 'bold',
+        fontSize: 9,
         textAlign: 'center',
         
     }

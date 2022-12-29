@@ -5,6 +5,7 @@ import Stories from '../components/home/stories'
 import Post from '../components/home/Post'
 import POSTS from '../data/posts'
 import Tabs from '../components/home/Tabs'
+import {IconFooter} from '../components/home/Tabs'
 const HomeScreen = () => {
   return (
     
@@ -21,7 +22,7 @@ const HomeScreen = () => {
       </ScrollView>
    {/* < Tabs /> */}
    
-  < Tabs />
+  < Tabs  icons={IconFooter}/>
    </SafeAreaView>
   )
 }

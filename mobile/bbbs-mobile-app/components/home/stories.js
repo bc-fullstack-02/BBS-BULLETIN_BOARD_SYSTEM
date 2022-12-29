@@ -21,7 +21,7 @@ const styels = StyleSheet.create({
     story:{
         width: 50,
         height: 50,
-        borderRadius: 50,
+        borderRadius: 80,
         borderWidth: 3,
         borderColor: '#89dbed',
         marginHorizontal: 10,

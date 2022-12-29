@@ -22,7 +22,10 @@ const Post = ({post}) => {
     <View style={{marginBottom:30}}>
       <PostHeader post={post}/>
       <PostImage post={post}/>
-      <Icon />   
+      <Icon />  
+      <Comment post={post}/>  
+      <CommentSection post={post}/> 
+      <CommentList post={post}/>   
     </View>
   )
 }
@@ -35,7 +38,8 @@ const PostHeader = ({post}) => {
       style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between", margin:5}}>
       <View style={{flexDirection:"row",alignItems:"center"}}>
       <Image source={post.profile_picture} style={styles.story} />
-      <Text style= {{color:"white",marginLeft:5,fontWeight:"700"}}>{post.user}</Text>
+      <Text style= {{color:"white",margin:5,fontWeight:"700"}}>{post.user}</Text>
+      <Text style={{display: "flex",marginTop: 25,fontSize: 12,marginLeft: -34,fontWeight: "700",color: "#8e8e8e",textTransform:"uppercase"}}>{post.Location}</Text>
       </View>
      <Text style={{color:"white",fontWeight:"900"}}>...</Text>
     </View>
@@ -49,22 +53,64 @@ const PostImage = ({post}) => (
      <Image source={post.image} style={{height:"100%", width:"100%", resizeMode:"cover"}} />
   </View>
 )
+{/*Likes */}
 
 {/*Parte dos Icones com o footer*/}
 
 const Icon = () => {
   return (
-    <View style={styles.icon}>
+    <View style={{flexDirection:"row",justifyContent:"space-around"}}>
       {postIcon.map((icon) => (
         <TouchableOpacity>
           <View>
-            <Image source={{ uri: icon.ImgUrl }} style={styles.iconImg} />
+            <Image source={{ uri: icon.ImgUrl }} style={{
+              width: 18,
+              height: 18,
+              margin: 5,}} />
+
           </View>
         </TouchableOpacity>
       ))}
     </View>
   );
 };
+
+{/*Parte dos descricao */}
+const Comment = ({post}) => {
+  return (
+    <View style={{flexDirection:"column",margin:5}}>
+      <Text style={{color:"white",marginLeft:5,fontWeight:"700",marginRight:5}}>{post.user}</Text>
+      <Text style={{color:"white",marginLeft:5,fontWeight:"700",marginRight:5}}>{post.likes} likes</Text>
+      <Text style={{color:"white",marginLeft:5,fontWeight:"700"}}>{post.caption}</Text>
+      <Text style={{color: "#8e8e8e",marginLeft: 5,fontWeight: "700",fontSize: 12,marginTop: 5}}>{post.postDate}</Text>
+    </View> 
+  );
+};
+
+{/*Parte dos Comentarios*/}
+const CommentSection = ({post}) => (
+  <TouchableOpacity>
+  <View style={{marginTop:5}}>
+    {!! post.comments.length && (
+  <Text style={{color:"#8e8e8e",marginLeft:5,fontWeight:"700"}}>
+    View{post.comments.length > 1 ? " all " : " "} {
+    post.comments.length}    
+     {post.comments.length > 1 ? " Coments" : " Coment"} 
+  </Text>)}
+  </View>
+</TouchableOpacity>
+)
+{/*exibir comentarios*/}
+const CommentList = ({post}) => (
+  <>
+    {post.comments.map((comment, index) => (
+      <View key={index} style={{flexDirection:"row",margin:5}}>
+        <Text style={{color:"white",fontWeight:"700", padding:5}}>{comment.user}</Text>
+        <Text style={{color:"white",fontWeight:"700", margin:5}}>{comment.comment}</Text>
+      </View>
+    ))}
+  </>
+)
 {/*Parte dos estilos*/}
 const styles = StyleSheet.create({
   story: {
@@ -73,20 +119,6 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 25,
     marginLeft: 10,  
-  },
-  footerIcon: {
-    width: 30,
-    height: 30,
-  },
-  icon: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    margin: 5,
-  },
-  iconImg: {   
-    width: 25,
-    height: 25,
-    margin: 5,
-  },
+  }  
 });
 export default Post

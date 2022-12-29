@@ -1,26 +1,22 @@
 const USERS = [{
-        user: "Bene",
-        image: require('./../assets/images/p9.jpeg')
+        user: "Brook",
+        image: require('./../assets/images/brook.jpg')
     },
     {
-        user: "Bene",
-        image: require('./../assets/images/p8.jpeg')
+        user: "Nami",
+        image: require('./../assets/images/nami.jpg')
     },
     {
-        user: "Beniel",
-        image: require('./../assets/images/p7.jpeg')
+        user: "Zoro",
+        image: require('./../assets/images/zoro.jpg')
     },
     {
-        user: "cledson",
-        image: require('./../assets/images/p6.jpeg')
+        user: "Luffy",
+        image: require('./../assets/images/luffy.jpg')
     },
     {
-        user: "Juliano",
-        image: require('./../assets/images/p5.jpeg')
+        user: "Sanji",
+        image: require('./../assets/images/sanji.jpg')
     },
-    {
-        user: "Paulo",
-        image: require('./../assets/images/p2.jpeg')
-    }
 ]
 export default USERS;
