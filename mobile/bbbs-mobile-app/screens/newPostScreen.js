@@ -1,12 +1,13 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { SafeAreaView,StyleSheet } from 'react-native'
 import React from 'react'
+import AddNewPost from '../components/newpost/addNewpost'
 
-const newPostScreen = () => {
+const NewPostScreen = () => {
   return (
-    <SafeAreaView>
-        <addNewpostComponent />
+    <SafeAreaView style={{ marginTop:35}}>
+        <AddNewPost />
     </SafeAreaView>
   )
 }
 
-export default newPostScreen
+export default NewPostScreen

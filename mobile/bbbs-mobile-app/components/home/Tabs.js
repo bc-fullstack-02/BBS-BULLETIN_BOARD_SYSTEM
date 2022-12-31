@@ -14,12 +14,12 @@ export const IconFooter = [{
 {
     name: "Add",
     Active : "https://img.icons8.com/ios/50/000000/plus-math--v1.png",
-    Inactive : "https://img.icons8.com/ios/50/000000/plus-math--v2.png"
+    Inactive : "https://img.icons8.com/ios/50/000001/plus-math--v1.png"
 },
 {
     name : "profile",
     Active : "https://img.icons8.com/ios/50/000000/user--v1.png",
-    Inactive : "https://img.icons8.com/ios/50/000000/user--v2.png"
+    Inactive : "https://img.icons8.com/ios/50/000001/user-not-found.png"
 },
 ]
 const Tabs = ({icons}) => {
@@ -44,17 +44,16 @@ const Tabs = ({icons}) => {
 {/* styles */}
 const styles = StyleSheet.create({
     wrapper: {
-      position: 'absolute',
-        marginTop: 750,
-        width: "100%",
-        height: "100%",
+        position: 'absolute',
+        marginTop: 760,
+        width: "100%", 
         backgroundColor: "#1e272e",
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30, 
         color: "#ffffff",
         padding: 2,        
-    },
+    }
 })
 
 
-export default Tabs
+export default Tabs;

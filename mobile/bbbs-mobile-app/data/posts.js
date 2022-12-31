@@ -24,7 +24,7 @@ const POSTS = [{
         Location: "Sao Paulo",
         postDate: "2 day ago",
         likes: 2500,
-        caption: "Aqui esta a descricao do post",
+        caption: "Money Desgraca",
         profile_picture: USERS[1].image,
         comments: [{
             user : "BeneTesla",
@@ -55,7 +55,7 @@ const POSTS = [{
         Location: "Sao Paulo",
         postDate: "2 day ago",
         likes: 800,
-        caption: "Aqui esta a descricao do post",
+        caption: "Carne deliciosa😁😁😁",
         profile_picture: USERS[3].image,
         comments: [{
             user : "Nami :",
